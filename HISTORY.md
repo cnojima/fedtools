@@ -367,3 +367,11 @@ Release 0.0.44
 * [ Arno V ] war: send email upon error
 * [ Arno V ] war: backdoor :)
 * [ Arno V ] jshint!!
+
+##Release 0.0.85 ~ Mar 30 2014 11:43
+* [ Gerard K. Cohen ] Update unit test template
+* [ Arno V ] war: if &#x2F;repo exists, use it instead of &#x2F;tmp
+* [ Arno V ] war: adding extra details in email for user branch checkout issue
+* [ Arno V ] war: adding warning about war life limit on jenkins
+* [ Arno V ] webapp: update lang files to concat instead of copy
+* [ Arno V ] war: don&#39;t open the backdoor if remote build queue is &#39;status&#39;
