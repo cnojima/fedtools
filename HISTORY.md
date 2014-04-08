@@ -375,3 +375,6 @@ Release 0.0.44
 * [ Arno V ] war: adding warning about war life limit on jenkins
 * [ Arno V ] webapp: update lang files to concat instead of copy
 * [ Arno V ] war: don&#39;t open the backdoor if remote build queue is &#39;status&#39;
+
+##Release 0.0.86 ~ Apr 07 2014 21:26
+* [ Arno V ] war: adding tar.gz as a possible war file extension
