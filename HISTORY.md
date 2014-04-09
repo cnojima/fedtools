@@ -378,3 +378,6 @@ Release 0.0.44
 
 ##Release 0.0.86 ~ Apr 07 2014 21:26
 * [ Arno V ] war: adding tar.gz as a possible war file extension
+
+##Release 0.0.87 ~ Apr 09 2014 13:19
+* [ Arno V ] war: fixing messing with tar.gz vs war
