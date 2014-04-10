@@ -381,3 +381,6 @@ Release 0.0.44
 
 ##Release 0.0.87 ~ Apr 09 2014 13:19
 * [ Arno V ] war: fixing messing with tar.gz vs war
+
+##Release 0.0.88 ~ Apr 09 2014 18:40
+* [ Arno V ] Fixing issue #28
