@@ -384,3 +384,7 @@ Release 0.0.44
 
 ##Release 0.0.88 ~ Apr 09 2014 18:40
 * [ Arno V ] Fixing issue #28
+
+##Release 0.0.92 ~ Apr 17 2014 11:45
+* [ Arno V ] Simplifying fedtools wria-yui (yui sync)
+* [ Gerard K. Cohen ] Update skin template with NXS skin
