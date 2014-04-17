@@ -333,7 +333,7 @@ case 'wria2-yui3':
 case 'wy': // hidden menu
   log.echo();
   require('../lib/yui3-utils').run(debug, pkgConfig, {}, function (err) {
-    if (err) {
+    if (err && err !== -1) {
       log.error(err);
     }
     log.echo();
