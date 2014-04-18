@@ -388,3 +388,7 @@ Release 0.0.44
 ##Release 0.0.92 ~ Apr 17 2014 11:45
 * [ Arno V ] Simplifying fedtools wria-yui (yui sync)
 * [ Gerard K. Cohen ] Update skin template with NXS skin
+
+##Release 0.0.93 ~ Apr 18 2014 15:57
+* [ Arno V ] Warning if the name of the YUI branch doesn&#39;t start with &#39;wf2-&#39;
+* [ Arno V ] removing obsolete code
