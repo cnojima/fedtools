@@ -392,3 +392,6 @@ Release 0.0.44
 ##Release 0.0.93 ~ Apr 18 2014 15:57
 * [ Arno V ] Warning if the name of the YUI branch doesn&#39;t start with &#39;wf2-&#39;
 * [ Arno V ] removing obsolete code
+
+##Release 0.0.94 ~ May 01 2014 17:10
+* [ Arno V ] war: fixing tar.gz filename
