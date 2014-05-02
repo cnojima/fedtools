@@ -395,3 +395,6 @@ Release 0.0.44
 
 ##Release 0.0.94 ~ May 01 2014 17:10
 * [ Arno V ] war: fixing tar.gz filename
+
+##Release 0.0.96 ~ May 02 2014 13:24
+* [ Arno V ] Removing extra quotes for Combo Loader
