@@ -401,3 +401,6 @@ Release 0.0.44
 
 ##Release 0.0.97 ~ May 07 2014 09:26
 * [ Arno V ] unicorn
+
+##Release 0.0.98 ~ May 16 2014 09:27
+* [ Arno V ] Relaxing jshint &quot;plusplus&quot; rule
