@@ -269,6 +269,8 @@ case 'ww': // hidden menu
 
 case 'wria2-war':
 case 'war': // hidden menu
+case 'tar': // hidden menu
+case 'tgz': // hidden menu
   utilities.timeTracker('start');
   log.echo();
   build.run(debug, {
