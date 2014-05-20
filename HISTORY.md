@@ -411,3 +411,7 @@ Release 0.0.44
 ##Release 0.0.100 ~ May 20 2014 09:01
 * [ Arno V ] builder fix
 * [ Arno V ] builder: update for tar.gz
+
+##Release 0.0.101 ~ May 20 2014 09:02
+* [ Arno V ] Updating HISTORY
+* [ Arno V ] builder fix
