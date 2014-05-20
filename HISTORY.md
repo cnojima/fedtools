@@ -414,3 +414,6 @@ Release 0.0.44
 
 ##Release 0.1.2 ~ May 20 2014 09:06
 * [ Arno V ] Fix builder
+
+##Release 0.1.3 ~ May 20 2014 09:19
+* [ Arno V ] builder: extra fix (if cannot play with .m2)
