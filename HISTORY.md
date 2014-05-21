@@ -417,3 +417,8 @@ Release 0.0.44
 
 ##Release 0.0.102 ~ May 20 2014 09:19
 * [ Arno V ] builder: extra fix (if cannot play with .m2)
+
+##Release 0.0.105 ~ May 21 2014 08:06
+* [ Arno V ] fedtools serve: small visual tweak (if java not found)
+* [ Arno V ] Adding &#39;compass watch&#39; to module watch (on top of shifter --watch)
+* [ Arno V ] Fix select command (due to previous refactor, it was silent)
