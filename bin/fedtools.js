@@ -31,7 +31,7 @@ var fs = require('fs'),
       'description': 'Generates a full webapp skeleton from scratch.'
     },
     'bump': {
-      'description': 'Update the version of the WF-RIA2 framework in all the files (pom.xml, shifter, etc)'
+      'description': 'Update the version of the WF-RIA2 framework in all the files (pom.xml, shifter, etc).'
     },
     'war': {
       'full': 'wria2-war',
@@ -68,6 +68,9 @@ var fs = require('fs'),
     'wm': {
       'full': 'wria2-mod',
       'description': 'Create a new module (skeleton code, including unit tests and documentation).'
+    },
+    'serve': {
+      'description': 'Serve your local copy of the WF-RIA2 framework examples/API.'
     }
   };
 
@@ -346,6 +349,18 @@ case 'wria2-mod':
 case 'wm': // hidden menu
   log.echo();
   require('../lib/wria2-modules').run(function () {});
+  break;
+
+case 'serve':
+  if (!program.f) {
+    log.echo('Usage: fedtools ' + command + ' -f <packaged-file.tar.gz>');
+    break;
+  } else {
+    log.echo();
+    require('../lib/wria2-serve').serve(debug, {
+      file: program.f
+    }, function () {});
+  }
   break;
 
   // case 'test':
