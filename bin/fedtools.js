@@ -224,7 +224,7 @@ case 'wria2-bump':
 case 'bump':
 case 'wbp': // hidden menu
   log.echo();
-  utilities.wria2bump(debug, function () {});
+  utilities.wria2bump(function () {});
   break;
 
 case 'wria2-selleck':
