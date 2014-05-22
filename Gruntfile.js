@@ -131,6 +131,18 @@ module.exports = function (grunt) {
         npm: true,
         commitMessage: PUBLISH_COMMIT_MSG + ' <%= version %>'
       }
+    },
+
+    yuidoc: {
+      compile: {
+        name: '<%= pkg.name %>',
+        description: '<%= pkg.description %>',
+        version: '<%= pkg.version %>',
+        options: {
+          paths: ['./bin', './lib'],
+          outdir: 'out/'
+        }
+      }
     }
   });
 
