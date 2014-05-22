@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
-/*jshint node:true, unused:true*/
+/**
+ * Provides the fedtools module
+ *
+ * @module fedtools
+ */
 
 var fs = require('fs'),
   path = require('path'),

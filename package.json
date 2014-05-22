@@ -58,6 +58,7 @@
     "grunt-contrib-copy": "*",
     "grunt-mkdir": "*",
     "grunt-shell": "*",
+    "grunt-contrib-yuidoc": "*",
     "load-grunt-tasks": "*",
     "semver": "*"
   },
