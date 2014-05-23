@@ -140,7 +140,8 @@ module.exports = function (grunt) {
         version: '<%= pkg.version %>',
         options: {
           paths: ['./bin', './lib'],
-          outdir: 'out/'
+          outdir: 'out/',
+          themedir: './data/yuidoc/themes/fedtools'
         }
       }
     }
