@@ -1,0 +1,1625 @@
+{
+    "project": {
+        "name": "fedtools",
+        "description": "Set of tools for FEDs",
+        "version": "0.0.107"
+    },
+    "files": {
+        "bin/fedtools.js": {
+            "name": "bin/fedtools.js",
+            "modules": {
+                "fedtools": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/git-helper.js": {
+            "name": "lib/git-helper.js",
+            "modules": {},
+            "classes": {
+                "git-helper": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/utilities.js": {
+            "name": "lib/utilities.js",
+            "modules": {},
+            "classes": {
+                "utilities": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/wria2-bootstrap.js": {
+            "name": "lib/wria2-bootstrap.js",
+            "modules": {},
+            "classes": {
+                "wria2-bootstrap": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/wria2-serve.js": {
+            "name": "lib/wria2-serve.js",
+            "modules": {},
+            "classes": {
+                "wria2-serve": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/yui3-utils.js": {
+            "name": "lib/yui3-utils.js",
+            "modules": {},
+            "classes": {
+                "yui3-utils": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "fedtools": {
+            "name": "fedtools",
+            "submodules": {},
+            "classes": {
+                "git-helper": 1,
+                "utilities": 1,
+                "wria2-bootstrap": 1,
+                "wria2-serve": 1,
+                "yui3-utils": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "lib/yui3-utils.js",
+            "line": 1,
+            "description": "This is the internal Fedtools API. It is not intended to be\nused by Fedtools users, but rather by Fedtools developers.\nIt is an easyly accessible repository of all the methods\navailable in one centralized document (automatically generated\nvia yuidoc)."
+        }
+    },
+    "classes": {
+        "git-helper": {
+            "name": "git-helper",
+            "shortname": "git-helper",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "fedtools",
+            "namespace": "",
+            "file": "lib/git-helper.js",
+            "line": 1,
+            "description": "Provides the git-helper class.",
+            "static": 1
+        },
+        "utilities": {
+            "name": "utilities",
+            "shortname": "utilities",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "fedtools",
+            "namespace": "",
+            "file": "lib/utilities.js",
+            "line": 1,
+            "description": "Utilities methods that can be used by multiple modules.",
+            "static": 1
+        },
+        "wria2-bootstrap": {
+            "name": "wria2-bootstrap",
+            "shortname": "wria2-bootstrap",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "fedtools",
+            "namespace": "",
+            "file": "lib/wria2-bootstrap.js",
+            "line": 1,
+            "description": "Provides the wria2-bootstrap class.",
+            "static": 1
+        },
+        "wria2-serve": {
+            "name": "wria2-serve",
+            "shortname": "wria2-serve",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "fedtools",
+            "namespace": "",
+            "file": "lib/wria2-serve.js",
+            "line": 1,
+            "description": "Provides the wria2-serve class.",
+            "static": 1
+        },
+        "yui3-utils": {
+            "name": "yui3-utils",
+            "shortname": "yui3-utils",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "fedtools",
+            "namespace": "",
+            "file": "lib/yui3-utils.js",
+            "line": 1,
+            "description": "Provides the yui3-utils class.",
+            "static": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "bin/fedtools.js",
+            "line": 149,
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "bin/fedtools.js",
+            "line": 151,
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "bin/fedtools.js",
+            "line": 169,
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "bin/fedtools.js",
+            "line": 171,
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "bin/fedtools.js",
+            "line": 190,
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "bin/fedtools.js",
+            "line": 192,
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "bin/fedtools.js",
+            "line": 199,
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "bin/fedtools.js",
+            "line": 201,
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/git-helper.js",
+            "line": 12,
+            "description": "Helper method to execute a git command and trap the result.",
+            "itemtype": "method",
+            "name": "_runGitCommand",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "cmdline",
+                    "description": "A git command line.",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "cwd",
+                            "description": "The path where to run the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "silent",
+                            "description": "If true, do no log the command line.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "verbose",
+                            "description": "If true, log stderr/stdout.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 2 arguments:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "Not null if there is a problem with the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "stdOut",
+                            "description": "The resulting output string without the trailing \\n",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/git-helper.js",
+            "line": 40,
+            "description": "Extract the most recent local SHA.",
+            "itemtype": "method",
+            "name": "getCurrentSHA",
+            "async": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "cwd",
+                            "description": "The path where to run the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "short",
+                            "description": "Flag to get the short or full SHA.",
+                            "type": "String",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "silent",
+                            "description": "If true, do no log the command line.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "verbose",
+                            "description": "If true, log stderr/stdout.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 2 arguments:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "Not null if there is a problem with the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "stdOut",
+                            "description": "The resulting output string without the trailing \\n",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/git-helper.js",
+            "line": 61,
+            "description": "Checks out a branch (fetching before in case the branch is not known locally yet).\n\nRuns `git fetch && git checkout <branch>`",
+            "itemtype": "method",
+            "name": "checkoutBranch",
+            "async": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "branch",
+                            "description": "The branch to checkout.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "cwd",
+                            "description": "The path where to run the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "silent",
+                            "description": "If true, do no log the command line.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "verbose",
+                            "description": "If true, log stderr/stdout.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 2 arguments:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "Not null if there is a problem with the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "stdOut",
+                            "description": "The resulting output string without the trailing \\n",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/git-helper.js",
+            "line": 84,
+            "description": "Clones a git repository.\n\nRuns `git clone [options]`",
+            "itemtype": "method",
+            "name": "cloneGitRepository",
+            "async": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "url",
+                            "description": "The git repository URL.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "cwd",
+                            "description": "The path where to run the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "cloneArgs",
+                            "description": "Possible options to be passed to the clone command.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "silent",
+                            "description": "If true, do no log the command line.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "verbose",
+                            "description": "If true, log stderr/stdout.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 2 arguments:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "Not null if there is a problem with the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "stdOut",
+                            "description": "The resulting output string without the trailing \\n",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/git-helper.js",
+            "line": 111,
+            "description": "Runs `git fetch`",
+            "itemtype": "method",
+            "name": "gitFetchLatestFromOrigin",
+            "async": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "cwd",
+                            "description": "The path where to run the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "silent",
+                            "description": "If true, do no log the command line.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "verbose",
+                            "description": "If true, log stderr/stdout.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 2 arguments:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "Not null if there is a problem with the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "stdOut",
+                            "description": "The resulting output string without the trailing \\n",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/git-helper.js",
+            "line": 129,
+            "description": "Add the provided URL as the 'upstream' remote.\n\nRuns `git remote add upstream options.url`",
+            "itemtype": "method",
+            "name": "gitAddUpstreamRemote",
+            "async": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "url",
+                            "description": "The upstream URL.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "cwd",
+                            "description": "The path where to run the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "silent",
+                            "description": "If true, do no log the command line.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "verbose",
+                            "description": "If true, log stderr/stdout.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 2 arguments:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "Not null if there is a problem with the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "stdOut",
+                            "description": "The resulting output string without the trailing \\n",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/git-helper.js",
+            "line": 150,
+            "description": "Checks if the current path is a git repository.\n\nRuns `git symbolic-ref HEAD`",
+            "itemtype": "method",
+            "name": "isGitRepository",
+            "async": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "cwd",
+                            "description": "The path where to run the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "silent",
+                            "description": "If true, do no log the command line.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "verbose",
+                            "description": "If true, log stderr/stdout.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 2 arguments:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "Not null if there is a problem with the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "stdOut",
+                            "description": "The resulting output string without the trailing \\n",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/git-helper.js",
+            "line": 170,
+            "description": "Find the current branch of a git repository.\n\nRuns `git rev-parse --abbrev-ref HEAD`",
+            "itemtype": "method",
+            "name": "getCurrentBranch",
+            "async": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "cwd",
+                            "description": "The path where to run the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "silent",
+                            "description": "If true, do no log the command line.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "verbose",
+                            "description": "If true, log stderr/stdout.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 2 arguments:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "Not null if there is a problem with the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "stdOut",
+                            "description": "The resulting output string without the trailing \\n",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/git-helper.js",
+            "line": 190,
+            "description": "Finds the root path of a git repository.\n\nRuns `git rev-parse --show-toplevel`",
+            "itemtype": "method",
+            "name": "findGitRootPath",
+            "async": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "cwd",
+                            "description": "The path where to run the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "silent",
+                            "description": "If true, do no log the command line.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "verbose",
+                            "description": "If true, log stderr/stdout.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 2 arguments:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "Not null if there is a problem with the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "stdOut",
+                            "description": "The resulting output string without the trailing \\n",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "git-helper",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 40,
+            "description": "Use this signal to check if a process is running.",
+            "itemtype": "property",
+            "name": "ALIVE_SIGNAL",
+            "type": "String",
+            "static": 1,
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 48,
+            "description": "Use this signal to kill a running process.",
+            "itemtype": "property",
+            "name": "KILL_SIGNAL",
+            "type": "String",
+            "static": 1,
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 56,
+            "description": "Use this property in conjunction with promptAndContinue.",
+            "itemtype": "property",
+            "name": "PROMPT_PASSWORD",
+            "type": "String",
+            "static": 1,
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 64,
+            "description": "Use this property in conjunction with promptAndContinue.",
+            "itemtype": "property",
+            "name": "PROMPT_CONFIRM",
+            "type": "String",
+            "static": 1,
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 72,
+            "description": "Use this property in conjunction with promptAndContinue.",
+            "itemtype": "property",
+            "name": "PROMPT_PROMPT",
+            "type": "String",
+            "static": 1,
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 98,
+            "description": "Start or stop a timer.\nStopping the timer will also log the result in minutes, seconds and milliseconds.\nThe default introductory text ('Elapsed time:') can be overridden.",
+            "itemtype": "method",
+            "name": "timeTracker",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "The timeTracker action type ('start' or 'stop')",
+                    "type": "String"
+                },
+                {
+                    "name": "label",
+                    "description": "The introductory text to display when the timer stops.\nDefault to \"Elapsed time: \"",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "example": [
+                "\n    utilities.timeTracker('start');\n    longRunningTask();\n    utilities.timeTracker('stop');"
+            ],
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 137,
+            "description": "Finds the `wf2/src` path of a wria2 git repository.",
+            "itemtype": "method",
+            "name": "getWF2srcPath",
+            "async": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "cwd",
+                            "description": "The path where to run the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "silent",
+                            "description": "If true, do no log the command line.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "verbose",
+                            "description": "If true, log stderr/stdout.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 2 arguments:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "On success, this will be null.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "srcPath",
+                            "description": "The path to wf2/src of the wria2 repository.",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 168,
+            "description": "Provides a helper method to display a prompt and expect an answer.\nDepending on the type of prompt requested, it will either accept\na simple Y/y/yes or N/n/no answer, or a more complex validation\nscheme (that can be passed via the configuration).",
+            "itemtype": "method",
+            "name": "promptAndContinue",
+            "async": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "infoMsg",
+                            "description": "A heading message to be displayed\n                                                 before the actual prompt.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "promptType",
+                            "description": "PROMPT_PASSWORD PROMPT_CONFIRM PROMPT_PROMPT",
+                            "type": "String"
+                        },
+                        {
+                            "name": "promptMsg",
+                            "description": "The prompt message (it will end with an input caret).",
+                            "type": "String"
+                        },
+                        {
+                            "name": "defaultValue",
+                            "description": "A default value in case the user presses ENTER.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "validator",
+                            "description": "A function to validate the user input passed as\nargument. Throw an error to invalidate the user entry and prompt again or return a value\n(which could be what the user entered or a modified version of it).",
+                            "type": "Function",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 2 arguments:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "On success, this will be null.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "value",
+                            "description": "The value the user entered, or the default value, or the\n                                 value returned by the validator function.",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "example": [
+                "\n    utilities.promptAndContinue({\n      promptType: utilities.PROMPT_PROMPT,\n      promptMsg: 'Type an existing path where you want to clone, or ENTER to use the current path:',\n      defaultValue: process.cwd(),\n      validator: function (value) {\n        var pathForClone;\n        value = utilities.resolvePath(value);\n        pathForClone = path.resolve(value);\n        if (!fs.existsSync(pathForClone)) {\n          log.error('Invalid path: ', value);\n          // prompt again\n          throw new Error();\n        } else {\n          return pathForClone;\n        }\n      }\n    }, callback);\n\n    utilities.promptAndContinue({\n     promptType: utilities.PROMPT_CONFIRM,\n     promptMsg: 'Do you want to clone the wria2 git repository locally? [Y|n]',\n     defaultValue: true\n    }, callback);\n\n    utilities.promptAndContinue({\n      promptType: utilities.PROMPT_PASSWORD,\n      promptMsg: 'Type the password for user warbuilder:',\n      validator: function (value) {\n        if (value === '') {\n          // prompt again\n          throw new Error();\n        } else {\n          return value;\n        }\n      }\n    }, function (err, value) {\n      if (value) {\n        userChoices.warbuilderuserpassword = value;\n      }\n      callback();\n    });"
+            ],
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 265,
+            "description": "Resolve a path and replace \"~\" with $HOME if needed",
+            "itemtype": "method",
+            "name": "resolvePath",
+            "params": [
+                {
+                    "name": "pathString",
+                    "description": "A path that can contain '~'.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "A resolved path.",
+                "type": "String"
+            },
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 277,
+            "description": "Generates a string representing a tree of the folder structure passed\nin argument.",
+            "itemtype": "method",
+            "name": "parseTree",
+            "async": 1,
+            "params": [
+                {
+                    "name": "start",
+                    "description": "The path to parse.",
+                    "type": "String"
+                },
+                {
+                    "name": "root",
+                    "description": "The root path to base the tree from.",
+                    "type": "String"
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 1 argument:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "tree",
+                            "description": "A string representing a tree.",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 335,
+            "description": "Checks if the current OS is Windows based.",
+            "itemtype": "method",
+            "name": "isWindows",
+            "return": {
+                "description": "True on if the OS is Windows.",
+                "type": "Boolean"
+            },
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 345,
+            "description": "Wrap a string given a maximum length, trying not to break words.",
+            "itemtype": "method",
+            "name": "wordWrap",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "The string to wrap",
+                    "type": "String"
+                },
+                {
+                    "name": "width",
+                    "description": "The maximum length of the desired width.",
+                    "type": "String",
+                    "optional": true,
+                    "optdefault": "75"
+                }
+            ],
+            "return": {
+                "description": "The wrapped string.",
+                "type": "String"
+            },
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 364,
+            "description": "Transform a string to setCamelCase.",
+            "itemtype": "method",
+            "name": "setCamelCase",
+            "params": [
+                {
+                    "name": "input",
+                    "description": "The string to convert to camelCase.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The input string converted into camelCase format.",
+                "type": "String"
+            },
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 378,
+            "description": "Runs `npm install` in the provided folder if `node_modules` doesn't exist.",
+            "itemtype": "method",
+            "name": "installLocalNpmPackages",
+            "async": 1,
+            "params": [
+                {
+                    "name": "srcPath",
+                    "description": "The path where a package.json file exists.",
+                    "type": "String"
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 1 argument:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "On success, this will be null.",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 408,
+            "description": "Finds a temporary folder based on the OS. If /repo exists,\nit will be used on Linux/Mac.",
+            "itemtype": "method",
+            "name": "getTemporaryDir",
+            "return": {
+                "description": "Path to a temporary folder.",
+                "type": "String"
+            },
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 435,
+            "description": "Finds the HOME directory based on the OS.",
+            "itemtype": "method",
+            "name": "getHomeDir",
+            "return": {
+                "description": "Path to the home directory.",
+                "type": "String"
+            },
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 445,
+            "description": "Helper method to update the framework version string in all the relevant files.\nIt updates `.shifter.json` and uses Maven for the rest.\nThis method must be run within a WF-RIA2 folder.\nIt will display the current version and prompt the user to enter a new one.\n\n__NOTE__: local combo loader\n\nif the user enters 'build' or 'combo', the `replace-wf2_combopath` key in the\n`.shifter.json` file will be updated with `../../../wria/combo?basePath=build&`",
+            "itemtype": "method",
+            "name": "wria2bump",
+            "async": 1,
+            "params": [
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 1 argument:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "On success, this will be null.",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 536,
+            "description": "Checks if a program or a list of programs are available.",
+            "itemtype": "method",
+            "name": "isAppInstalled",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "An object or an array of objects.",
+                    "type": "Array|Object",
+                    "props": [
+                        {
+                            "name": "name",
+                            "description": "The name of the program to check.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "error",
+                            "description": "An optional error message to display if\n                             the given program cannot be found.",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "True on success (all programs are available).",
+                "type": "Boolean"
+            },
+            "example": [
+                "\n    utilities.isAppInstalled([{\n      name: 'mvn',\n      error: 'Maven is not installed on this machine'\n    }, {\n      name: 'java',\n      error: 'Java cannot be executed on this machine'\n    }]);"
+            ],
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 579,
+            "description": "Helper method to download a file over ssh.",
+            "itemtype": "method",
+            "name": "downloadFileOverSSH",
+            "async": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "srcFile",
+                            "description": "The remote file path + name.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "dstFile",
+                            "description": "The local file path + name.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "username",
+                            "description": "Username to ssh to the remote host.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "password",
+                            "description": "Password of the username.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "host",
+                            "description": "The remote hostname.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "port",
+                            "description": "The remote ssh port.",
+                            "type": "String",
+                            "optional": true,
+                            "optdefault": "22"
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 1 argument:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "On success, this will be null.",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 652,
+            "description": "Helper method to send a POSIX signal to a running process.",
+            "itemtype": "method",
+            "name": "sendSignal",
+            "params": [
+                {
+                    "name": "pid",
+                    "description": "The recipient process id.",
+                    "type": "String|Number"
+                },
+                {
+                    "name": "signal",
+                    "description": "The signal to send.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "True on success.",
+                "type": "Boolean"
+            },
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 668,
+            "description": "Helper method to send an email. It is hard coded to use the local WF SMTP host.",
+            "itemtype": "method",
+            "name": "sendEmail",
+            "async": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "attachments",
+                            "description": "The path + filename of a local file to attach.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "from",
+                            "description": "The email 'From' field.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "to",
+                            "description": "The email 'To' field (can be a string or an array of string).",
+                            "type": "String|Array"
+                        },
+                        {
+                            "name": "subject",
+                            "description": "The email 'Subject' field.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "htmlBody",
+                            "description": "The email 'Body' field in HTML format.",
+                            "type": "String"
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 1 argument:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "On success, this will be null.",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 730,
+            "description": "Helper method to set a user fedtools configuration into the global fedtools\nconfiguration file. This file is located in the current user home directory.",
+            "itemtype": "method",
+            "name": "fedtoolsRcSet",
+            "params": [
+                {
+                    "name": "key",
+                    "description": "A valid fedtools key (ex: username, useremail, etc.)",
+                    "type": "String"
+                },
+                {
+                    "name": "value",
+                    "description": "The value to set the key to.",
+                    "type": "String"
+                }
+            ],
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 749,
+            "description": "Helper method to get a user fedtools configuration from the global fedtools\nconfiguration file. This file is located in the current user home directory.",
+            "itemtype": "method",
+            "name": "fedtoolsRcGet",
+            "params": [
+                {
+                    "name": "key",
+                    "description": "A valid fedtools key (ex: username, useremail, etc.)",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The value corresponding to the key or undefined if not found.",
+                "type": "String"
+            },
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/utilities.js",
+            "line": 767,
+            "description": "Helper method to move a file. It uses pipes to circumvent the `mv` limits on\ntemporary folders (like /tmp).",
+            "itemtype": "method",
+            "name": "copyThenEraseSync",
+            "params": [
+                {
+                    "name": "src",
+                    "description": "The source path + file to move.",
+                    "type": "String"
+                },
+                {
+                    "name": "dst",
+                    "description": "The destination path + file.",
+                    "type": "String"
+                }
+            ],
+            "class": "utilities",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/wria2-bootstrap.js",
+            "line": 335,
+            "description": "Helper method supposed to be called only for a command line direct call.\nIt uses several public APIs that can be used independently.\n\nThis is used to bootstrap a WF-RIA2 git repository: it takes care of\nsynchronizing the corresponding YUI3 branch, as well as installing\ngit hooks and a few npm packages.\n\nIt will:\n   - Prompt the user for some options\n       - Clone WF2 or use existing location\n       - Where to clone (if cloning)\n       - The fork name to clone (if cloning)\n       - The WF-RIA2 branch name\n       - The YUI3 branch name to synchronize with\n       - Choice to start a full build once bootstrapped",
+            "itemtype": "method",
+            "name": "promptAndSync",
+            "async": 1,
+            "params": [
+                {
+                    "name": "verbose",
+                    "description": "True to log stderr/stdout.",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "pkgConfig",
+                    "description": "Object holding package.json 'config' properties.",
+                    "type": "Object"
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 1 argument:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "On success, this will be null.",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "wria2-bootstrap",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/wria2-serve.js",
+            "line": 21,
+            "description": "Method to be called directly by the main command line library to:\n   - Extract a packaged WF-RIA2 tarball.\n   - Run an internal JSP container to serve examples/tests/API.\n   - Optionaly open the default browser with the corresponding URL.",
+            "itemtype": "method",
+            "name": "serve",
+            "async": 1,
+            "params": [
+                {
+                    "name": "debug",
+                    "description": "True to display stderr/stdout in the console.",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "file",
+                            "description": "The path+filename of the WF-RIA2 tarball or the\n                              name of the already extracted folder.",
+                            "type": "String"
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 2 arguments:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "Not null if there is a problem with the command.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "stdOut",
+                            "description": "The resulting output string without the trailing \\n",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "wria2-serve",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/yui3-utils.js",
+            "line": 31,
+            "description": "Use this property in conjunction with _promptForCloneOrExisting.",
+            "itemtype": "property",
+            "name": "YUI3_CLONE",
+            "type": "String",
+            "static": 1,
+            "class": "yui3-utils",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/yui3-utils.js",
+            "line": 39,
+            "description": "Use this property in conjunction with _promptForCloneOrExisting.",
+            "itemtype": "property",
+            "name": "YUI3_EXISTING",
+            "type": "String",
+            "static": 1,
+            "class": "yui3-utils",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/yui3-utils.js",
+            "line": 51,
+            "description": "Clone the YUI3 git repository in a temporary folder. If a branch\nis specified, a shallow clone will happen. This command is\nverbose by design.",
+            "itemtype": "method",
+            "name": "cloneTemporaryYui",
+            "async": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "url",
+                            "description": "The YUI git repository URL.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "branch",
+                            "description": "The branch to checkout.",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 2 arguments:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "On success, this will be null.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "srcPath",
+                            "description": "The temporary path to the cloned YUI3\nrepository.",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "yui3-utils",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/yui3-utils.js",
+            "line": 86,
+            "description": "Copy the `src` YUI3 folder to the WF-RIA2 `wf2/src` folder.",
+            "itemtype": "method",
+            "name": "copyYUItoWF2",
+            "async": 1,
+            "params": [
+                {
+                    "name": "yui3Path",
+                    "description": "The YUI3 local root path.",
+                    "type": "String"
+                },
+                {
+                    "name": "wf2Path",
+                    "description": "The WF2 local root path.",
+                    "type": "String"
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 1 argument:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "On success, this will be null.",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "yui3-utils",
+            "module": "fedtools"
+        },
+        {
+            "file": "lib/yui3-utils.js",
+            "line": 222,
+            "description": "Helper method supposed to be called only for a command line direct call.\nIt uses several public APIs that can be used independently.\n\nIt will:\n   - Prompt the user for some options (location, branch)\n   - Clone YUI3 in a temporary location\n   - Copy YUI3 src to WF2 src",
+            "itemtype": "method",
+            "name": "promptAndSync",
+            "async": 1,
+            "params": [
+                {
+                    "name": "verbose",
+                    "description": "True to log stderr/stdout.",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "pkgConfig",
+                    "description": "Object holding package.json 'config' properties.",
+                    "type": "Object"
+                },
+                {
+                    "name": "done",
+                    "description": "Callback to execute when done. It gets 1 argument:",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "On success, this will be null.",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "yui3-utils",
+            "module": "fedtools"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type",
+            "line": " bin/fedtools.js:149"
+        },
+        {
+            "message": "Missing item type",
+            "line": " bin/fedtools.js:151"
+        },
+        {
+            "message": "Missing item type",
+            "line": " bin/fedtools.js:169"
+        },
+        {
+            "message": "Missing item type",
+            "line": " bin/fedtools.js:171"
+        },
+        {
+            "message": "Missing item type",
+            "line": " bin/fedtools.js:190"
+        },
+        {
+            "message": "Missing item type",
+            "line": " bin/fedtools.js:192"
+        },
+        {
+            "message": "Missing item type",
+            "line": " bin/fedtools.js:199"
+        },
+        {
+            "message": "Missing item type",
+            "line": " bin/fedtools.js:201"
+        }
+    ]
+}

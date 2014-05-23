@@ -334,7 +334,7 @@ case 'wb': // hidden menu
 case 'wria2-init':
 case 'wi': // hidden menu
   log.echo();
-  require('../lib/wria2-bootstrap').run(debug, pkgConfig, function (err) {
+  require('../lib/wria2-bootstrap').bootstrapRepository(debug, pkgConfig, function (err) {
     if (err) {
       log.error(err);
     }
@@ -345,7 +345,7 @@ case 'wi': // hidden menu
 case 'wria2-yui3':
 case 'wy': // hidden menu
   log.echo();
-  require('../lib/yui3-utils').run(debug, pkgConfig, {}, function (err) {
+  require('../lib/yui3-utils').promptAndSync(debug, pkgConfig, function (err) {
     if (err && err !== -1) {
       log.error(err);
     }
