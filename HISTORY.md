@@ -447,3 +447,6 @@ Release 0.0.44
 
 ##Release 0.0.109 ~ May 23 2014 15:47
 * [ Arno V ] Adding the option to open the default browser with the examples&#x2F;API
+
+##Release 0.0.110 ~ May 23 2014 16:09
+* [ Arno V ] updating grunt api to support other OS
