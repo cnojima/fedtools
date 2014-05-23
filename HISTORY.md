@@ -422,3 +422,6 @@ Release 0.0.44
 * [ Arno V ] fedtools serve: small visual tweak (if java not found)
 * [ Arno V ] Adding &#39;compass watch&#39; to module watch (on top of shifter --watch)
 * [ Arno V ] Fix select command (due to previous refactor, it was silent)
+
+##Release 0.0.106 ~ May 23 2014 10:50
+* [ Arno V ] Fixing &#39;serve&#39; command to accept file or folder
