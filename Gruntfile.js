@@ -180,20 +180,20 @@ module.exports = function (grunt) {
 
       switch (process.platform) {
       case 'darwin':
-        cmdline = 'open ' + url;
+        cmdline = 'open';
         break;
       case 'linux':
-        cmdline = 'xdg-open ' + url;
+        cmdline = 'xdg-open';
         break;
       case 'win32':
-        cmdline = 'start ' + url;
+        cmdline = 'start';
         break;
       }
 
       if (cmdline) {
         grunt.log.subhead('Opening in default browser...');
         grunt.util.spawn({
-          cmd: 'open',
+          cmd: cmdline,
           args: [url]
         }, function () {});
       }
