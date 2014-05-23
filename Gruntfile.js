@@ -151,7 +151,7 @@ module.exports = function (grunt) {
         options: {
           port: 9090,
           protocol: 'http',
-          debug: true,
+          debug: false,
           keepalive: true,
           base: ['./data/docs']
         }
@@ -166,21 +166,39 @@ module.exports = function (grunt) {
 
   grunt.registerTask('api', 'Serve the API documentation', function () {
     var done = this.async(),
-      _afterConnect;
+      url = 'http://localhost:9090/index.html',
+      _afterServerStarted;
     grunt.log.subhead('Grunt [ ' + this.name.cyan + ' ]');
     grunt.task.run('connect');
     done();
 
-    _afterConnect = function () {
-      grunt.log.subhead('Opening default browser...');
-      grunt.util.spawn({
-        cmd: 'open',
-        args: ['http://localhost:9090/index.html']
-      }, function () {});
+    _afterServerStarted = function () {
+      var cmdline;
+
+      console.log();
+      console.log('Local URL is now available here: ' + url.cyan);
+
+      switch (process.platform) {
+      case 'darwin':
+      case 'linux':
+        cmdline = 'open ' + url;
+        break;
+      case 'win32':
+        cmdline = 'start ' + url;
+        break;
+      }
+
+      if (cmdline) {
+        grunt.log.subhead('Opening in default browser...');
+        grunt.util.spawn({
+          cmd: 'open',
+          args: [url]
+        }, function () {});
+      }
     };
 
     setTimeout(function () {
-      _afterConnect();
+      _afterServerStarted();
     }, 1000);
 
 
