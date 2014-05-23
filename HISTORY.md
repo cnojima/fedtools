@@ -428,3 +428,19 @@ Release 0.0.44
 
 ##Release 0.0.107 ~ May 23 2014 12:49
 * [ Arno V ] Fix &#39;serve&#39; issue when the user is not in the same folder
+
+##Release 0.0.108 ~ May 23 2014 15:29
+* [ Arno V ] yuidoc: done for now
+* [ Arno V ] yuidoc: wip
+* [ Arno V ] yuidoc: wip
+* [ Arno V ] yuidoc: wip
+* [ Arno V ] yuidoc: wip
+* [ Arno V ] yuidoc: missing properties on utilities - not working yet
+* [ Arno V ] yuidoc: utilities done.
+* [ Arno V ] yuidoc: wip
+* [ Arno V ] yuidoc: wip
+* [ Arno V ] yuidoc: wip
+* [ Arno V ] yuidoc: wip
+* [ Arno V ] yuidoc: missing properties on utilities - not working yet
+* [ Arno V ] yuidoc: utilities done.
+* [ Arno V ] yuidoc: wip
