@@ -444,3 +444,6 @@ Release 0.0.44
 * [ Arno V ] yuidoc: missing properties on utilities - not working yet
 * [ Arno V ] yuidoc: utilities done.
 * [ Arno V ] yuidoc: wip
+
+##Release 0.0.109 ~ May 23 2014 15:47
+* [ Arno V ] Adding the option to open the default browser with the examples&#x2F;API
