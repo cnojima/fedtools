@@ -450,3 +450,6 @@ Release 0.0.44
 
 ##Release 0.0.110 ~ May 23 2014 16:09
 * [ Arno V ] updating grunt api to support other OS
+
+##Release 0.0.111 ~ May 23 2014 16:30
+* [ Arno V ] Fixing API + local examples in linux...
