@@ -1,6 +1,14 @@
 #!/usr/bin/env node
 
-/*jshint node:true, unused:true*/
+/**
+ * This is the internal Fedtools API. It is not intended to be
+ * used by Fedtools users, but rather by Fedtools developers.
+ * It is an easyly accessible repository of all the methods
+ * available in one centralized document (automatically generated
+ * via yuidoc).
+ *
+ * @module fedtools
+ */
 
 var fs = require('fs'),
   path = require('path'),
@@ -220,7 +228,7 @@ case 'wria2-bump':
 case 'bump':
 case 'wbp': // hidden menu
   log.echo();
-  utilities.wria2bump(debug, function () {});
+  utilities.wria2bump(function () {});
   break;
 
 case 'wria2-selleck':
@@ -326,7 +334,7 @@ case 'wb': // hidden menu
 case 'wria2-init':
 case 'wi': // hidden menu
   log.echo();
-  require('../lib/wria2-bootstrap').run(debug, pkgConfig, function (err) {
+  require('../lib/wria2-bootstrap').bootstrapRepository(debug, pkgConfig, function (err) {
     if (err) {
       log.error(err);
     }
@@ -337,7 +345,7 @@ case 'wi': // hidden menu
 case 'wria2-yui3':
 case 'wy': // hidden menu
   log.echo();
-  require('../lib/yui3-utils').run(debug, pkgConfig, {}, function (err) {
+  require('../lib/yui3-utils').promptAndSync(debug, pkgConfig, function (err) {
     if (err && err !== -1) {
       log.error(err);
     }

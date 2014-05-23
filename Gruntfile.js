@@ -131,15 +131,64 @@ module.exports = function (grunt) {
         npm: true,
         commitMessage: PUBLISH_COMMIT_MSG + ' <%= version %>'
       }
+    },
+
+    yuidoc: {
+      compile: {
+        name: '<%= pkg.name %>',
+        description: '<%= pkg.description %>',
+        version: '<%= pkg.version %>',
+        options: {
+          paths: ['./bin', './lib'],
+          outdir: './data/docs/',
+          themedir: './data/yuidoc/themes/fedtools'
+        }
+      }
+    },
+
+    connect: {
+      server: {
+        options: {
+          port: 9090,
+          protocol: 'http',
+          debug: true,
+          keepalive: true,
+          base: ['./data/docs']
+        }
+      }
     }
+
   });
 
   // register running tasks
   grunt.registerTask('default', ['help']);
   grunt.registerTask('publish', ['shell', 'release']);
 
+  grunt.registerTask('api', 'Serve the API documentation', function () {
+    var done = this.async(),
+      _afterConnect;
+    grunt.log.subhead('Grunt [ ' + this.name.cyan + ' ]');
+    grunt.task.run('connect');
+    done();
+
+    _afterConnect = function () {
+      grunt.log.subhead('Opening default browser...');
+      grunt.util.spawn({
+        cmd: 'open',
+        args: ['http://localhost:9090/index.html']
+      }, function () {});
+    };
+
+    setTimeout(function () {
+      _afterConnect();
+    }, 1000);
+
+
+  });
+
   grunt.registerTask('pack', 'Create package', function () {
     var done = this.async();
+    grunt.log.subhead('Grunt [ ' + this.name.cyan + ' ]');
     grunt.util.spawn({
       cmd: 'npm',
       args: ['pack']
@@ -151,6 +200,7 @@ module.exports = function (grunt) {
   grunt.registerTask('pack-remove', 'Remove package', function () {
     var version = grunt.config.get('pkg').version,
       name = grunt.config.get('pkg').name;
+    grunt.log.subhead('Grunt [ ' + this.name.cyan + ' ]');
     grunt.file.delete(name + '-' + version + '.tgz');
   });
 
@@ -160,7 +210,7 @@ module.exports = function (grunt) {
       name = grunt.config.get('pkg').name,
       localName = 'local-' + name + '-' + version + '.tgz',
       regName = 'registry-' + name + '-' + version + '.tgz';
-
+    grunt.log.subhead('Grunt [ ' + this.name.cyan + ' ]');
     grunt.util.spawn({
       cmd: 'tar',
       args: ['xzf', regName, '-C', 'registry'],
@@ -183,6 +233,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('diffd', 'Runs a diffd', function () {
     var done = this.async();
+    grunt.log.subhead('Grunt [ ' + this.name.cyan + ' ]');
     grunt.util.spawn({
       cmd: 'diff',
       args: ['-b', '-q', '-r', 'local', 'registry'],
@@ -199,6 +250,7 @@ module.exports = function (grunt) {
 
   // need to check the release
   grunt.registerTask('check', 'Check the release validity', function (env) {
+    grunt.log.subhead('Grunt [ ' + this.name.cyan + ' ]');
     grunt.task.run('clean');
     grunt.task.run('mkdir');
     if (env && env === 'noproxy') {
@@ -214,6 +266,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('help', 'Display help usage', function () {
+    grunt.log.subhead('Grunt [ ' + this.name.cyan + ' ]');
     console.log();
     console.log('Type "grunt publish" to:');
     console.log(' - bump the version in package.json file.');
@@ -224,7 +277,13 @@ module.exports = function (grunt) {
     console.log(' - push the new tag out to github.');
     console.log(' - publish the new version to npm.');
     console.log();
-    console.log('Then type "grunt check" to:');
+    console.log('Type "grunt check" to:');
     console.log(' - check if the newly published package is valid.');
+    console.log();
+    console.log('Type "grunt yuidoc" to:');
+    console.log(' - Re-build the API documentation.');
+    console.log();
+    console.log('Type "grunt api" to:');
+    console.log(' - Serve the API documentation on localhost:9090');
   });
 };

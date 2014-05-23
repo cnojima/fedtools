@@ -56,8 +56,10 @@
     "grunt-curl": "*",
     "grunt-contrib-clean": "*",
     "grunt-contrib-copy": "*",
+    "grunt-contrib-connect": "*",
     "grunt-mkdir": "*",
     "grunt-shell": "*",
+    "grunt-contrib-yuidoc": "*",
     "load-grunt-tasks": "*",
     "semver": "*"
   },
