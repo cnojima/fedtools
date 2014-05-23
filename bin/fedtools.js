@@ -352,8 +352,9 @@ case 'wm': // hidden menu
   break;
 
 case 'serve':
+case 'server': // hidden menu
   if (!program.f) {
-    log.echo('Usage: fedtools ' + command + ' -f <packaged-file.tar.gz>');
+    log.echo('Usage: fedtools ' + command + ' -f <packaged-file.tar.gz|folder>');
     break;
   } else {
     log.echo();
