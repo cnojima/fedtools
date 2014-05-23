@@ -180,8 +180,10 @@ module.exports = function (grunt) {
 
       switch (process.platform) {
       case 'darwin':
-      case 'linux':
         cmdline = 'open ' + url;
+        break;
+      case 'linux':
+        cmdline = 'xdg-open ' + url;
         break;
       case 'win32':
         cmdline = 'start ' + url;
