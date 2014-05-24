@@ -17,8 +17,9 @@ module.exports = function (grunt) {
 
   // helper callback for shell task
   // - Update the HISTORY.md file with the latest logs
-  // - Stage, commit and publish the HISTORY.md file
-  function postGetLatestLogs(err, stdout, stderr, cb) {
+  // - Update the API docs
+  // - Stage, commit and publish the HISTORY.md file and the API docs
+  function prePublish(err, stdout, stderr, cb) {
     var buffer,
       version = semver.inc(grunt.config.get('pkg').version, 'patch'),
       date = moment(new Date()).format('MMM DD YYYY HH:mm');
@@ -32,10 +33,10 @@ module.exports = function (grunt) {
 
       if (buffer) {
         fs.appendFileSync(historyFile, buffer);
-
+        grunt.task.run('yuidoc');
         grunt.util.spawn({
           cmd: 'git',
-          args: ['add', historyFile]
+          args: ['add', historyFile, 'data/docs']
         }, function (err) {
           if (err) {
             grunt.fail.fatal('Unable to run "git add" ' + err);
@@ -43,7 +44,7 @@ module.exports = function (grunt) {
           } else {
             grunt.util.spawn({
               cmd: 'git',
-              args: ['commit', '-m', 'Updating HISTORY']
+              args: ['commit', '-m', 'Updating HISTORY and API docs']
             }, function (err) {
               if (err) {
                 grunt.fail.fatal('Unable to run "git commit" ' + err);
@@ -115,7 +116,7 @@ module.exports = function (grunt) {
           ' --pretty=format:\'* [ %an ] %s\' --no-merges | grep -v "' +
           PUBLISH_COMMIT_MSG + '"',
         options: {
-          callback: postGetLatestLogs
+          callback: prePublish
         }
       }
     },
