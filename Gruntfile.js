@@ -10,7 +10,7 @@ module.exports = function (grunt) {
     historyFile = 'HISTORY.md',
     PUBLISH_COMMIT_MSG = 'Publishing npm release',
     TPL_HISTORY_ENTRY = '\n##Release {{version}} ~ {{date}}\n' +
-      '{{history}}';
+    '{{history}}';
 
   // load plugins
   require('load-grunt-tasks')(grunt);
@@ -140,8 +140,8 @@ module.exports = function (grunt) {
         version: '<%= pkg.version %>',
         options: {
           paths: ['./bin', './lib'],
-          outdir: './data/docs/',
-          themedir: './data/yuidoc/themes/fedtools'
+          outdir: './docs/out',
+          themedir: './docs/themes/fedtools'
         }
       }
     },
@@ -153,7 +153,7 @@ module.exports = function (grunt) {
           protocol: 'http',
           debug: false,
           keepalive: true,
-          base: ['./data/docs']
+          base: ['./docs/out']
         }
       }
     }

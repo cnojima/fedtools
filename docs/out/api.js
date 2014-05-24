@@ -14,7 +14,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "fedtools",
             "name": "fedtools",
-            "description": "This is the internal Fedtools API. It is not intended to be\nused by Fedtools users, but rather by Fedtools developers.\nIt is an easyly accessible repository of all the methods\navailable in one centralized document (automatically generated\nvia yuidoc)."
+            "description": "This is the internal Fedtools API documentation. It is not intended to be\nused by Fedtools users, but rather by Fedtools developers.\nIt is an easily accessible repository of all the methods\navailable in one centralized document (automatically generated\nvia yuidoc)."
         }
     ]
 } };
