@@ -468,3 +468,8 @@ Release 0.0.44
 * [ Arno V ] moving &#39;docs&#39; out of the deliverables
 * [ Arno V ] Better API url
 * [ Arno V ] Typo
+
+##Release 0.0.116 ~ May 24 2014 12:44
+* [ Arno V ] Removing all API doc generator from fedtools
+* [ Arno V ] removing API documentation generator from fedtools (see fedtools-api)
+* [ Arno V ] Simplifying &#39;grunt api&#39;, taking advantage of &#39;connect&#39; awesomeness
