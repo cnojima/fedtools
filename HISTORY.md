@@ -462,3 +462,9 @@ Release 0.0.44
 
 ##Release 0.0.114 ~ May 23 2014 17:44
 * [ Arno V ] Fixing publishing + API docs
+
+##Release 0.0.115 ~ May 24 2014 09:57
+* [ Arno V ] Oops, fixing out dir for docs
+* [ Arno V ] moving &#39;docs&#39; out of the deliverables
+* [ Arno V ] Better API url
+* [ Arno V ] Typo
