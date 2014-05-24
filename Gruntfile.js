@@ -33,10 +33,9 @@ module.exports = function (grunt) {
 
       if (buffer) {
         fs.appendFileSync(historyFile, buffer);
-        grunt.task.run('yuidoc');
         grunt.util.spawn({
           cmd: 'git',
-          args: ['add', historyFile, 'data/docs']
+          args: ['add', historyFile, './data/docs']
         }, function (err) {
           if (err) {
             grunt.fail.fatal('Unable to run "git add" ' + err);
@@ -163,7 +162,7 @@ module.exports = function (grunt) {
 
   // register running tasks
   grunt.registerTask('default', ['help']);
-  grunt.registerTask('publish', ['shell', 'release']);
+  grunt.registerTask('publish', ['yuidoc', 'shell', 'release']);
 
   grunt.registerTask('api', 'Serve the API documentation', function () {
     var done = this.async(),
