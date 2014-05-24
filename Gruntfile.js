@@ -231,11 +231,5 @@ module.exports = function (grunt) {
     console.log();
     console.log('Type "grunt check" to:');
     console.log(' - check if the newly published package is valid.');
-    console.log();
-    console.log('Type "grunt yuidoc" to:');
-    console.log(' - Re-build the API documentation.');
-    console.log();
-    console.log('Type "grunt api" to:');
-    console.log(' - Serve the API documentation on localhost:9090');
   });
 };
