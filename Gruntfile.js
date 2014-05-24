@@ -9,8 +9,8 @@ module.exports = function (grunt) {
 
     historyFile = 'HISTORY.md',
     PUBLISH_COMMIT_MSG = 'Publishing npm release',
-    TPL_HISTORY_ENTRY = '\n##Release {{version}} ~ {{date}}\n' +
-    '{{history}}';
+    TPL_HISTORY_ENTRY = '\n##Release {{version}} ~ {{date}}\n' + '{{history}}',
+    GENERATED_DOCS_PATH = './docs/out';
 
   // load plugins
   require('load-grunt-tasks')(grunt);
@@ -35,7 +35,7 @@ module.exports = function (grunt) {
         fs.appendFileSync(historyFile, buffer);
         grunt.util.spawn({
           cmd: 'git',
-          args: ['add', historyFile, './data/docs']
+          args: ['add', historyFile, GENERATED_DOCS_PATH]
         }, function (err) {
           if (err) {
             grunt.fail.fatal('Unable to run "git add" ' + err);
@@ -140,7 +140,7 @@ module.exports = function (grunt) {
         version: '<%= pkg.version %>',
         options: {
           paths: ['./bin', './lib'],
-          outdir: './docs/out',
+          outdir: GENERATED_DOCS_PATH,
           themedir: './docs/themes/fedtools'
         }
       }
@@ -153,7 +153,7 @@ module.exports = function (grunt) {
           protocol: 'http',
           debug: false,
           keepalive: true,
-          base: ['./docs/out']
+          base: [GENERATED_DOCS_PATH]
         }
       }
     }
