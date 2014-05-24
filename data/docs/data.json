@@ -2,7 +2,7 @@
     "project": {
         "name": "fedtools",
         "description": "Set of tools for FEDs",
-        "version": "0.0.107"
+        "version": "0.0.113"
     },
     "files": {
         "bin/fedtools.js": {

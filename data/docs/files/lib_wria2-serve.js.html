@@ -19,7 +19,7 @@
             
         </div>
         <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.0.107</em>
+            <em>API Docs for: 0.0.113</em>
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -182,13 +182,27 @@ exports.serve = function (debug, options, done) {
         url = &#x27;http://localhost:8090/&#x27; + path.basename(destPath) + &#x27;/examples/index.html&#x27;;
 
         _afterServerStarted = function (url) {
+          var cmdline, msg;
+
           log.echo();
           log.blue(&#x27;Local URL is now available here:&#x27;);
           log.echo(url);
           log.echo();
 
-          if (process.platform === &#x27;darwin&#x27;) {
-            var msg = &#x27;Open it in your default browser? [Y|n]&#x27;;
+          switch (process.platform) {
+          case &#x27;darwin&#x27;:
+            cmdline = &#x27;open &#x27; + url;
+            break;
+          case &#x27;linux&#x27;:
+            cmdline = &#x27;xdg-open &#x27; + url;
+            break;
+          case &#x27;win32&#x27;:
+            cmdline = &#x27;start &#x27; + url;
+            break;
+          }
+
+          if (cmdline) {
+            msg = &#x27;Open it in your default browser? [Y|n]&#x27;;
             utilities.promptAndContinue({
               promptType: utilities.PROMPT_CONFIRM,
               promptMsg: msg,
@@ -196,7 +210,6 @@ exports.serve = function (debug, options, done) {
             }, function (err, value) {
               if (value) {
                 log.echo(&#x27;Opening...&#x27;);
-                cmdline = &#x27;open &#x27; + url;
                 cmd.run(cmdline, {
                   detached: true,
                   verbose: false,

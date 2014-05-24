@@ -459,3 +459,6 @@ Release 0.0.44
 
 ##Release 0.0.113 ~ May 23 2014 17:40
 * [ Arno V ] updating the API docs when publishing
+
+##Release 0.0.114 ~ May 23 2014 17:44
+* [ Arno V ] Fixing publishing + API docs
