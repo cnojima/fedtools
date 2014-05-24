@@ -63,3 +63,19 @@ This will:
     - It will have a simple example page
     - It will have a simple unit test page
     - It will have a JSP tag template
+
+## API for developers
+
+An API documentation can be generated via YUIdoc. Since the API documentation is referring to not only fedtools, but also fedtools-commands and fedtools-logs, the generator has been moved to its own project: fedtools-api.
+
+To generate the latest API, type the following commands:
+
+```
+git clone https://github.com/aversini/fedtools-api.git
+cd fedtools-api
+npm install
+sudo npm install -g grunt-cli # if you don't already have it
+grunt
+```
+
+That's it! This will spawn a local server and open the main page in your default browser.
