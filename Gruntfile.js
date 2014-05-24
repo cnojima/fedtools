@@ -149,11 +149,14 @@ module.exports = function (grunt) {
     connect: {
       server: {
         options: {
+          useAvailablePort: true,
           port: 9090,
           protocol: 'http',
           debug: false,
           keepalive: true,
-          base: [GENERATED_DOCS_PATH]
+          base: [GENERATED_DOCS_PATH],
+          open: true,
+          hostname: 'localhost'
         }
       }
     }
@@ -163,48 +166,8 @@ module.exports = function (grunt) {
   // register running tasks
   grunt.registerTask('default', ['help']);
   grunt.registerTask('publish', ['yuidoc', 'shell', 'release']);
+  grunt.registerTask('api', ['connect']);
 
-  grunt.registerTask('api', 'Serve the API documentation', function () {
-    var done = this.async(),
-      url = 'http://localhost:9090/modules/fedtools.html',
-      _afterServerStarted;
-    grunt.log.subhead('Grunt [ ' + this.name.cyan + ' ]');
-    grunt.task.run('connect');
-    done();
-
-    _afterServerStarted = function () {
-      var cmdline;
-
-      console.log();
-      console.log('Local URL is now available here: ' + url.cyan);
-
-      switch (process.platform) {
-      case 'darwin':
-        cmdline = 'open';
-        break;
-      case 'linux':
-        cmdline = 'xdg-open';
-        break;
-      case 'win32':
-        cmdline = 'start';
-        break;
-      }
-
-      if (cmdline) {
-        grunt.log.subhead('Opening in default browser...');
-        grunt.util.spawn({
-          cmd: cmdline,
-          args: [url]
-        }, function () {});
-      }
-    };
-
-    setTimeout(function () {
-      _afterServerStarted();
-    }, 1000);
-
-
-  });
 
   grunt.registerTask('pack', 'Create package', function () {
     var done = this.async();
