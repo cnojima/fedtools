@@ -166,7 +166,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('api', 'Serve the API documentation', function () {
     var done = this.async(),
-      url = 'http://localhost:9090/index.html',
+      url = 'http://localhost:9090/modules/fedtools.html',
       _afterServerStarted;
     grunt.log.subhead('Grunt [ ' + this.name.cyan + ' ]');
     grunt.task.run('connect');
