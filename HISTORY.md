@@ -456,3 +456,6 @@ Release 0.0.44
 
 ##Release 0.0.112 ~ May 23 2014 16:37
 * [ Arno V ] Fixing grunt api... again
+
+##Release 0.0.113 ~ May 23 2014 17:40
+* [ Arno V ] updating the API docs when publishing
