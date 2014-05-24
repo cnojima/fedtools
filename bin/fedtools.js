@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * This is the internal Fedtools API. It is not intended to be
+ * This is the internal Fedtools API documentation. It is not intended to be
  * used by Fedtools users, but rather by Fedtools developers.
- * It is an easyly accessible repository of all the methods
+ * It is an easily accessible repository of all the methods
  * available in one centralized document (automatically generated
  * via yuidoc).
  *
