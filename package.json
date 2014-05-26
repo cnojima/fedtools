@@ -28,6 +28,7 @@
     "cli-color": "~0.2.3",
     "fedtools-commands": "*",
     "fedtools-logs": "*",
+    "fedtools-utilities": "*",
     "findit": "~1.1.0",
     "glob": "~3.2.7",
     "mkdirp": "~0.3.5",
