@@ -476,3 +476,6 @@ Release 0.0.44
 
 ##Release 0.0.117 ~ May 25 2014 17:28
 * [ Arno V ] Removing utilities&#x2F;git-helper&#x2F;yui3-utils (now using fedtools-utilities)
+
+##Release 0.0.118 ~ May 25 2014 17:31
+* [ Arno V ] Oops, missing fedtools-utilities dependency
