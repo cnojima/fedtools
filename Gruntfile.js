@@ -2,72 +2,13 @@
 
 module.exports = function (grunt) {
 
-  var moment = require('moment'),
-    mustache = require('mustache'),
-    fs = require('fs'),
-    semver = require('semver'),
+  var fs = require('fs'),
 
     historyFile = 'HISTORY.md',
-    PUBLISH_COMMIT_MSG = 'Publishing npm release',
-    TPL_HISTORY_ENTRY = '\n##Release {{version}} ~ {{date}}\n' + '{{history}}';
+    PUBLISH_COMMIT_MSG = 'Publishing npm release';
 
   // load plugins
   require('load-grunt-tasks')(grunt);
-
-  // helper callback for shell task
-  // - Update the HISTORY.md file with the latest logs
-  // - Update the API docs
-  // - Stage, commit and publish the HISTORY.md file and the API docs
-  function prePublish(err, stdout, stderr, cb) {
-    var buffer,
-      version = semver.inc(grunt.config.get('pkg').version, 'patch'),
-      date = moment(new Date()).format('MMM DD YYYY HH:mm');
-
-    if (stdout) {
-      buffer = mustache.render(TPL_HISTORY_ENTRY, {
-        version: version,
-        date: date,
-        history: stdout
-      });
-
-      if (buffer) {
-        fs.appendFileSync(historyFile, buffer);
-        grunt.util.spawn({
-          cmd: 'git',
-          args: ['add', historyFile]
-        }, function (err) {
-          if (err) {
-            grunt.fail.fatal('Unable to run "git add" ' + err);
-            cb();
-          } else {
-            grunt.util.spawn({
-              cmd: 'git',
-              args: ['commit', '-m', 'Updating HISTORY and API docs']
-            }, function (err) {
-              if (err) {
-                grunt.fail.fatal('Unable to run "git commit" ' + err);
-                cb();
-              } else {
-                grunt.util.spawn({
-                  cmd: 'git',
-                  args: ['push']
-                }, function (err) {
-                  if (err) {
-                    grunt.fail.fatal('Unable to run "git push" ' + err);
-                  }
-                  cb();
-                });
-              }
-            });
-          }
-        });
-      } else {
-        cb();
-      }
-    } else {
-      cb();
-    }
-  }
 
   // project configuration
   grunt.initConfig({
@@ -108,17 +49,6 @@ module.exports = function (grunt) {
       },
     },
 
-    shell: {
-      getHistory: {
-        command: 'git log <%=pkg.version%>..HEAD' +
-          ' --pretty=format:\'* [ %an ] %s\' --no-merges | grep -v "' +
-          PUBLISH_COMMIT_MSG + '"',
-        options: {
-          callback: prePublish
-        }
-      }
-    },
-
     release: {
       options: {
         bump: true,
@@ -136,7 +66,45 @@ module.exports = function (grunt) {
 
   // register running tasks
   grunt.registerTask('default', ['help']);
-  grunt.registerTask('publish', ['shell', 'release']);
+  grunt.registerTask('publish', ['release', 'history']);
+
+  grunt.registerTask('history', 'Updating ' + historyFile, function () {
+    var done = this.async();
+    require('fedtools-utilities').git.getChangeLog({}, function (err, log) {
+      if (!err) {
+        fs.writeFileSync(historyFile, log);
+        grunt.util.spawn({
+          cmd: 'git',
+          args: ['add', historyFile]
+        }, function (err) {
+          if (err) {
+            grunt.fail.fatal('Unable to run "git add" ' + err);
+            done();
+          } else {
+            grunt.util.spawn({
+              cmd: 'git',
+              args: ['commit', '-m', 'Updating HISTORY']
+            }, function (err) {
+              if (err) {
+                grunt.fail.fatal('Unable to run "git commit" ' + err);
+                done();
+              } else {
+                grunt.util.spawn({
+                  cmd: 'git',
+                  args: ['push']
+                }, function (err) {
+                  if (err) {
+                    grunt.fail.fatal('Unable to run "git push" ' + err);
+                  }
+                  done();
+                });
+              }
+            });
+          }
+        });
+      }
+    });
+  });
 
   grunt.registerTask('pack', 'Create package', function () {
     var done = this.async();
