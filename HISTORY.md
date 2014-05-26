@@ -473,3 +473,6 @@ Release 0.0.44
 * [ Arno V ] Removing all API doc generator from fedtools
 * [ Arno V ] removing API documentation generator from fedtools (see fedtools-api)
 * [ Arno V ] Simplifying &#39;grunt api&#39;, taking advantage of &#39;connect&#39; awesomeness
+
+##Release 0.0.117 ~ May 25 2014 17:28
+* [ Arno V ] Removing utilities&#x2F;git-helper&#x2F;yui3-utils (now using fedtools-utilities)
