@@ -13,10 +13,9 @@
 var fs = require('fs'),
   path = require('path'),
   log = require('fedtools-logs'),
+  utilities = require('fedtools-utilities'),
 
   build = require('../lib/wria2-build'),
-  app = require('../lib/app-bootstrap'),
-  utilities = require('../lib/utilities'),
 
   program,
   argv,
@@ -202,6 +201,7 @@ if (program._.length === 0 || program._.length > 1) {
 switch (command) {
 case 'app-flow':
 case 'af': // hidden menu
+  var app = require('../lib/app-bootstrap');
   log.echo();
   app.run(app.TYPE_FLOW, function (err) {
     if (err && err !== -1) {
@@ -212,6 +212,7 @@ case 'af': // hidden menu
 
 case 'app-init':
 case 'ai': // hidden menu
+  var app = require('../lib/app-bootstrap');
   utilities.timeTracker('start');
   log.echo();
   app.run(app.TYPE_APP, function (err) {
@@ -345,7 +346,7 @@ case 'wi': // hidden menu
 case 'wria2-yui3':
 case 'wy': // hidden menu
   log.echo();
-  require('../lib/yui3-utils').promptAndSync(debug, pkgConfig, function (err) {
+  utilities.yui3.promptAndSync(debug, pkgConfig, function (err) {
     if (err && err !== -1) {
       log.error(err);
     }
