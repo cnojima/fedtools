@@ -83,7 +83,9 @@ module.exports = function (grunt) {
 
   grunt.registerTask('history', 'Updating ' + historyFile, function () {
     var done = this.async();
-    require('fedtools-utilities').git.getChangeLog({}, function (err, log) {
+    require('fedtools-utilities').git.getChangeLog({
+      ignore: ['Publishing npm release', 'Updating HISTORY']
+    }, function (err, log) {
       if (!err) {
         fs.writeFileSync(historyFile, log);
         grunt.util.spawn({
