@@ -66,7 +66,20 @@ module.exports = function (grunt) {
 
   // register running tasks
   grunt.registerTask('default', ['help']);
-  grunt.registerTask('publish', ['release', 'history']);
+  grunt.registerTask('publish', ['pre-release', 'release', 'history']);
+
+  grunt.registerTask('pre-release', 'Checking if we can release', function () {
+    var done = this.async();
+    grunt.util.spawn({
+      cmd: 'git',
+      args: ['log', '-2', '--pretty=format:"%s"']
+    }, function (err, data) {
+      if (!err && data.stdout.match(PUBLISH_COMMIT_MSG)) {
+        grunt.fail.warn('It looks like it\'s been published already?');
+      }
+      done(err);
+    });
+  });
 
   grunt.registerTask('history', 'Updating ' + historyFile, function () {
     var done = this.async();
