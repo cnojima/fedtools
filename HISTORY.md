@@ -1,87 +1,66 @@
 
+__0.0.121 / 2014-05-27__
+
+    eaadf61 [Arno V]: Updating grunt history to ignore some commits
+
 __0.0.120 / 2014-05-26__
 
-    80e2d83 [Arno V]: Publishing npm release 0.0.120
-    6893b66 [Arno V]: Adding &#39;pre-release&#39; grunt task
-    1fbf3b2 [Arno V]: Updating HISTORY
+    6893b66 [Arno V]: Adding 'pre-release' grunt task
 
 __0.0.119 / 2014-05-26__
 
-    7de890c [Arno V]: Publishing npm release 0.0.119
     4388a33 [Arno V]: Updating Grunfile with utilities.git.getChangelog
 
 __0.0.118 / 2014-05-25__
 
-    db1820c [Arno V]: Publishing npm release 0.0.118
-    d7176f3 [Arno V]: Updating HISTORY and API docs
     fed329f [Arno V]: Oops, missing fedtools-utilities dependency
 
 __0.0.117 / 2014-05-25__
 
-    a9d9a20 [Arno V]: Publishing npm release 0.0.117
-    f5cd3c1 [Arno V]: Updating HISTORY and API docs
-    da83b97 [Arno V]: Removing utilities&#x2F;git-helper&#x2F;yui3-utils (now using fedtools-utilities)
+    da83b97 [Arno V]: Removing utilities/git-helper/yui3-utils (now using fedtools-utilities)
 
 __0.0.116 / 2014-05-24__
 
-    440b26a [Arno V]: Publishing npm release 0.0.116
-    79a8caf [Arno V]: Updating HISTORY and API docs
     25e5982 [Arno V]: Removing all API doc generator from fedtools
     b814bd4 [Arno V]: removing API documentation generator from fedtools (see fedtools-api)
-    ec4e520 [Arno V]: Simplifying &#39;grunt api&#39;, taking advantage of &#39;connect&#39; awesomeness
+    ec4e520 [Arno V]: Simplifying 'grunt api', taking advantage of 'connect' awesomeness
 
 __0.0.115 / 2014-05-24__
 
-    cf042e0 [Arno V]: Publishing npm release 0.0.115
-    3cbcfc0 [Arno V]: Updating HISTORY and API docs
     80e4b35 [Arno V]: Oops, fixing out dir for docs
-    50a2822 [Arno V]: moving &#39;docs&#39; out of the deliverables
+    50a2822 [Arno V]: moving 'docs' out of the deliverables
     f4e3ba9 [Arno V]: Better API url
     766f380 [Arno V]: Typo
 
 __0.0.114 / 2014-05-23__
 
-    9deebc4 [Arno V]: Publishing npm release 0.0.114
-    fa7f77a [Arno V]: Updating HISTORY and API docs
     f13afc9 [Arno V]: Fixing publishing + API docs
 
 __0.0.113 / 2014-05-23__
 
-    884de23 [Arno V]: Publishing npm release 0.0.113
-    929147c [Arno V]: Updating HISTORY and API docs
     c708c05 [Arno V]: updating the API docs when publishing
 
 __0.0.112 / 2014-05-23__
 
-    634ba15 [Arno V]: Publishing npm release 0.0.112
-    807a058 [Arno V]: Updating HISTORY
     263dfc1 [Arno V]: Fixing grunt api... again
 
 __0.0.111 / 2014-05-23__
 
-    9104c93 [Arno V]: Publishing npm release 0.0.111
-    9700827 [Arno V]: Updating HISTORY
     168b624 [Arno V]: Fixing API + local examples in linux...
 
 __0.0.110 / 2014-05-23__
 
-    324fa14 [Arno V]: Publishing npm release 0.0.110
-    2a40308 [Arno V]: Updating HISTORY
     7b170b4 [Arno V]: updating grunt api to support other OS
 
 __0.0.109 / 2014-05-23__
 
-    62a4762 [Arno V]: Publishing npm release 0.0.109
-    960ff43 [Arno V]: Updating HISTORY
-    0bbce8b [Arno V]: Adding the option to open the default browser with the examples&#x2F;API
+    0bbce8b [Arno V]: Adding the option to open the default browser with the examples/API
 
 __0.0.108 / 2014-05-23__
 
-    19189d9 [Arno V]: Publishing npm release 0.0.108
-    22475b0 [Arno V]: Updating HISTORY
-    edf464f [Arno V]: Merge pull request #32 from aversini&#x2F;yuidoc
+    edf464f [Arno V]: Merge pull request #32 from aversini/yuidoc
     ed76a5a [Arno V]: yuidoc: done for now
-    10cbefa [Arno V]: Merge branch &#39;yuidoc&#39; of https:&#x2F;&#x2F;github.com&#x2F;aversini&#x2F;fedtools into yuidoc
+    10cbefa [Arno V]: Merge branch 'yuidoc' of https://github.com/aversini/fedtools into yuidoc
     bd2a628 [Arno V]: yuidoc: wip
     3ee992c [Arno V]: yuidoc: wip
     cfb8a7e [Arno V]: yuidoc: wip
@@ -98,174 +77,109 @@ __0.0.108 / 2014-05-23__
 
 __0.0.107 / 2014-05-23__
 
-    60d090c [Arno V]: Publishing npm release 0.0.107
-    c7be62f [Arno V]: Updating HISTORY
-    55174dd [Arno V]: Fix &#39;serve&#39; issue when the user is not in the same folder
+    55174dd [Arno V]: Fix 'serve' issue when the user is not in the same folder
 
 __0.0.106 / 2014-05-23__
 
-    7a3965b [Arno V]: Publishing npm release 0.0.106
-    a4d5330 [Arno V]: Updating HISTORY
-    d037743 [Arno V]: Fixing &#39;serve&#39; command to accept file or folder
+    d037743 [Arno V]: Fixing 'serve' command to accept file or folder
 
 __0.0.105 / 2014-05-21__
 
-    d56f70c [Arno V]: Publishing npm release 0.0.105
-    3c9799b [Arno V]: Updating HISTORY
     49130f1 [Arno V]: fedtools serve: small visual tweak (if java not found)
-    dd6ad5f [Arno V]: Adding &#39;compass watch&#39; to module watch (on top of shifter --watch)
+    dd6ad5f [Arno V]: Adding 'compass watch' to module watch (on top of shifter --watch)
     2c0c5fd [Arno V]: Fix select command (due to previous refactor, it was silent)
 
 __0.0.104 / 2014-05-20__
 
-    5abcf15 [Arno V]: Publishing npm release 0.0.104
     db387fa [Arno V]: Fixing release version...
-    ccdd074 [Arno V]: adding &#39;serve&#39; option to serve the new tar.gz server automatically
+    ccdd074 [Arno V]: adding 'serve' option to serve the new tar.gz server automatically
 
 __0.1.3 / 2014-05-20__
 
-    27a80c6 [Arno V]: Publishing npm release 0.1.3
-    948040c [Arno V]: Updating HISTORY
     260fa91 [Arno V]: builder: extra fix (if cannot play with .m2)
 
 __0.1.2 / 2014-05-20__
 
-    150a771 [Arno V]: Publishing npm release 0.1.2
-    2ee2f41 [Arno V]: Updating HISTORY
     4465fff [Arno V]: Fix builder
-
-__0.1.1 / 2014-05-19__
-
-    649a6ce [Arno V]: Publishing npm release 0.1.1
 
 __0.0.100 / 2014-05-19__
 
-    3b0449a [Arno V]: Publishing npm release 0.0.100
-    a1a3d5b [Arno V]: Updating HISTORY
-    361fde6 [Arno V]: Merge pull request #30 from aversini&#x2F;builder
+    361fde6 [Arno V]: Merge pull request #30 from aversini/builder
     7e184ee [Arno V]: builder: final touches
 
 __0.0.101 / 2014-05-20__
 
-    b921b6c [Arno V]: Publishing npm release 0.0.101
-    da358e1 [Arno V]: Updating HISTORY
-    9c72ec0 [Arno V]: Publishing npm release 0.0.100
-    c30f5bc [Arno V]: Updating HISTORY
     b4a79b6 [Arno V]: builder fix
     9776130 [Arno V]: builder: update for tar.gz
 
 __0.0.99 / 2014-05-18__
 
-    969404c [Arno V]: Publishing npm release 0.0.99
-    7c25c2a [Arno V]: Updating HISTORY
     757d6d6 [Arno V]: bootstrap: removing yui clone vs existing to simplify usability
 
 __0.0.98 / 2014-05-16__
 
-    951b807 [Arno V]: Publishing npm release 0.0.98
-    da75ee9 [Arno V]: Updating HISTORY
-    0bd0f0d [Arno V]: Relaxing jshint &quot;plusplus&quot; rule
+    0bd0f0d [Arno V]: Relaxing jshint "plusplus" rule
 
 __0.0.97 / 2014-05-07__
 
-    bd90c6d [Arno V]: Publishing npm release 0.0.97
-    019f612 [Arno V]: Updating HISTORY
     6e19053 [Arno V]: unicorn
 
 __0.0.96 / 2014-05-02__
 
-    29e24f5 [Arno V]: Publishing npm release 0.0.96
-    0805495 [Arno V]: Updating HISTORY
     ec78084 [Arno V]: Removing extra quotes for Combo Loader
-
-__0.0.95 / 2014-05-02__
-
-    acdb27f [Arno V]: Publishing npm release 0.0.95
 
 __0.0.94 / 2014-05-01__
 
-    9747086 [Arno V]: Publishing npm release 0.0.94
-    5213f81 [Arno V]: Updating HISTORY
     868610e [Arno V]: war: fixing tar.gz filename
 
 __0.0.93 / 2014-04-18__
 
-    cfdf46b [Arno V]: Publishing npm release 0.0.93
-    827dd6e [Arno V]: Updating HISTORY
-    9415490 [Arno V]: Warning if the name of the YUI branch doesn&#39;t start with &#39;wf2-&#39;
+    9415490 [Arno V]: Warning if the name of the YUI branch doesn't start with 'wf2-'
     8427694 [Arno V]: removing obsolete code
 
 __0.0.92 / 2014-04-17__
 
-    e2b9132 [Arno V]: Publishing npm release 0.0.92
-    a9e2ac7 [Arno V]: Updating HISTORY
-    04c5f99 [Arno V]: Merge branch &#39;refs&#x2F;heads&#x2F;yui-sync&#39;
+    04c5f99 [Arno V]: Merge branch 'refs/heads/yui-sync'
     7cebcab [Arno V]: Simplifying fedtools wria-yui (yui sync)
-    59cff5a [Arno V]: Merge pull request #29 from gerardkcohen&#x2F;nxs-update
+    59cff5a [Arno V]: Merge pull request #29 from gerardkcohen/nxs-update
     3a3948c [Gerard K. Cohen]: Update skin template with NXS skin
-
-__0.0.91 / 2014-04-09__
-
-    30ea084 [Arno V]: Publishing npm release 0.0.91
-
-__0.0.90 / 2014-04-09__
-
-    7581276 [Arno V]: Publishing npm release 0.0.90
-
-__0.0.89 / 2014-04-09__
-
-    d1a2db4 [Arno V]: Publishing npm release 0.0.89
 
 __0.0.88 / 2014-04-09__
 
-    ae0f09d [Arno V]: Publishing npm release 0.0.88
-    dc121a7 [Arno V]: Updating HISTORY
     b8eefcb [Arno V]: Fixing issue #28
 
 __0.0.87 / 2014-04-09__
 
-    a4bb03b [Arno V]: Publishing npm release 0.0.87
-    b7ef05b [Arno V]: Updating HISTORY
     3530810 [Arno V]: war: fixing messing with tar.gz vs war
 
 __0.0.86 / 2014-04-07__
 
-    3d2fc62 [Arno V]: Publishing npm release 0.0.86
-    97ec9a7 [Arno V]: Updating HISTORY
     497b108 [Arno V]: war: adding tar.gz as a possible war file extension
 
 __0.0.85 / 2014-03-30__
 
-    23a26b6 [Arno V]: Publishing npm release 0.0.85
-    b5758ee [Arno V]: Updating HISTORY
-    b3fd4da [Arno V]: Merge pull request #26 from gerardkcohen&#x2F;unit-test-template
+    b3fd4da [Arno V]: Merge pull request #26 from gerardkcohen/unit-test-template
     95d7da2 [Gerard K. Cohen]: Update unit test template
-    90f3a61 [Arno V]: war: if &#x2F;repo exists, use it instead of &#x2F;tmp
+    90f3a61 [Arno V]: war: if /repo exists, use it instead of /tmp
     cd75f5d [Arno V]: war: adding extra details in email for user branch checkout issue
     03eb99e [Arno V]: war: adding warning about war life limit on jenkins
     18e670a [Arno V]: webapp: update lang files to concat instead of copy
-    2163d20 [Arno V]: war: don&#39;t open the backdoor if remote build queue is &#39;status&#39;
+    2163d20 [Arno V]: war: don't open the backdoor if remote build queue is 'status'
 
 __0.0.84 / 2014-02-11__
 
-    541c11e [Arno V]: Publishing npm release 0.0.84
-    275f1eb [Arno V]: Updating HISTORY
     d19af89 [Arno V]: war: send email upon error
     82d161c [Arno V]: war: backdoor :)
     85c3499 [Arno V]: jshint!!
 
 __0.0.83 / 2014-02-10__
 
-    0cb0c9e [Arno V]: Publishing npm release 0.0.83
-    e1b8555 [Arno V]: Updating HISTORY
-    9bb760d [Arno V]: build: adding &#39;wf2&#39; module special build - if needed
+    9bb760d [Arno V]: build: adding 'wf2' module special build - if needed
     85ed5db [Arno V]: war: Add upload url to success message for war build - fixes issue #24
-    355d1f2 [Arno V]: WAR: replacing &#39;custom-&#39; with git short sha as a unique identifier
+    355d1f2 [Arno V]: WAR: replacing 'custom-' with git short sha as a unique identifier
 
 __0.0.82 / 2014-02-09__
 
-    a4207e9 [Arno V]: Publishing npm release 0.0.82
-    d9fa3f6 [Arno V]: Updating HISTORY
     33b3e21 [Arno V]: Attaching logs to war builds - fixes issue #23
     78f0071 [Arno V]: war: adding log file output
     7762be2 [Arno V]: Update content
@@ -273,87 +187,61 @@ __0.0.82 / 2014-02-09__
     fad3883 [Arno V]: fixing session manager ping url
     67fe7d6 [Arno V]: webapp: adding session manager to common pages
 
-__0.0.81 / 2014-02-02__
-
-    b02cf0d [Arno V]: Publishing npm release 0.0.81
-
-__0.0.80 / 2014-02-02__
-
-    6f3c750 [Arno V]: Publishing npm release 0.0.80
-
 __0.0.79 / 2014-02-02__
 
-    255accf [Arno V]: Publishing npm release 0.0.79
-    9d07cba [Arno V]: Updating HISTORY
     040c682 [Arno V]: Moving from commanderjs to optimist
     54ed9e3 [Arno V]: Typo fix
     898e45d [Arno V]: webapp: Gruntfile cleanup
     1cfee04 [Arno V]: webapp: adding wf2-footer to main template
     dc22be7 [Arno V]: webapp: bypass shifter lint
     dc0aeeb [Arno V]: WAR: sending more error email notifications
-    79407d7 [Arno V]: webapp: automatically generates lang&#x2F;flow.js from lang&#x2F;flow_en.js
+    79407d7 [Arno V]: webapp: automatically generates lang/flow.js from lang/flow_en.js
     c3d548e [Arno V]: webapp: producing prod ready js files if needed
-    386e679 [Arno V]: Merge branch &#39;master&#39; of https:&#x2F;&#x2F;github.com&#x2F;aversini&#x2F;fedtools
+    386e679 [Arno V]: Merge branch 'master' of https://github.com/aversini/fedtools
     1027187 [Arno V]: webapp: adding lang support on the js side
     838273a [Arno V]: app: fix incorrect name spacing for code css
     af6b185 [Arno V]: app: update to latest jetty plugin
-    8a7ad73 [Arno V]: app: add extra comment to tell &#39;do not modify, automatically generated file...&#39;
+    8a7ad73 [Arno V]: app: add extra comment to tell 'do not modify, automatically generated file...'
 
 __0.0.78 / 2014-01-24__
 
-    0a37f0b [Arno V]: Publishing npm release 0.0.78
-    6f97c7a [Arno V]: Updating HISTORY
-    d61e7ca [Arno V]: More explicit prompt for &#39;git username&#39;
+    d61e7ca [Arno V]: More explicit prompt for 'git username'
     d1c3f61 [Arno V]: Relaxing jshint requirements for single vs double quotes
-    a4dc8f1 [Arno V]: Relaxing Jshint for single vs double quotes: now it&#39;s only checking for mixed
+    a4dc8f1 [Arno V]: Relaxing Jshint for single vs double quotes: now it's only checking for mixed
     da8dd2f [Arno V]: Small update for App bootstrap (remove extra navigation for basic flow)
 
 __0.0.77 / 2014-01-20__
 
-    fb7067e [Arno V]: Publishing npm release 0.0.77
-    4e30f99 [Arno V]: Updating HISTORY
-    69261fe [Arno V]: Command line optimization: delaying &#39;requires&#39; until they&#39;re needed
+    69261fe [Arno V]: Command line optimization: delaying 'requires' until they're needed
 
 __0.0.76 / 2014-01-19__
 
-    e5aea45 [Arno V]: Publishing npm release 0.0.76
-    7a6f802 [Arno V]: Updating HISTORY
     7196119 [Arno V]: remote war: instead of trying (and failing) to move the war file to the home folder of the war builder, leave it in the tmp dir which will be automatically removed after a while.
     b036d72 [Arno V]: war: replacing fs.renameSync with own version to prevent error on linux and renaming on different partitions
 
 __0.0.75 / 2014-01-18__
 
-    5b71fff [Arno V]: Publishing npm release 0.0.75
-    50dd324 [Arno V]: Updating HISTORY
-    b14e5b5 [Arno V]: war: make sure the file is where it&#39;s supposed to be...
+    b14e5b5 [Arno V]: war: make sure the file is where it's supposed to be...
 
 __0.0.74 / 2014-01-18__
 
-    8d67ae0 [Arno V]: Publishing npm release 0.0.74
-    0c3985e [Arno V]: Updating HISTORY
     ee23228 [Arno V]: Ooops, adding back maven build!
     f4f4429 [Arno V]: war: add completion time to notification
-    012fe2b [Arno V]: war: fix email &#39;from&#39; for WF rules
+    012fe2b [Arno V]: war: fix email 'from' for WF rules
     80b1a92 [Arno V]: war: better notifications
 
 __0.0.73 / 2014-01-17__
 
-    aa28daa [Arno V]: Publishing npm release 0.0.73
-    90a4e1a [Arno V]: Updating HISTORY
     69b5082 [Arno V]: webapp: minor typos
     ffe1fb5 [Arno V]: Moving jshint from shifter to grunt
 
 __0.0.72 / 2014-01-17__
 
-    41d0dc4 [Arno V]: Publishing npm release 0.0.72
-    9e7b639 [Arno V]: Updating HISTORY
     f479895 [Arno V]: Remembering user name, user email and user branch for next time WAR build is run
     00de491 [Arno V]: Fixing history file...
 
 __0.0.71 / 2014-01-17__
 
-    a9556fa [Arno V]: Publishing npm release 0.0.71
-    77f6b15 [Arno V]: Updating HISTORY
     d793c36 [Arno V]: war: final cleanup
     1a17f52 [Arno V]: war
     2ec7a99 [Arno V]: war
@@ -378,12 +266,10 @@ __0.0.71 / 2014-01-17__
 
 __0.0.70 / 2014-01-10__
 
-    2c48cec [Arno V]: Publishing npm release 0.0.70
-    4f38525 [Arno V]: Updating HISTORY
-    1d00561 [Arno V]: Merge pull request #22 from aversini&#x2F;war
+    1d00561 [Arno V]: Merge pull request #22 from aversini/war
     f685c79 [Arno V]: remove test
     8a0f727 [Arno V]: war: fix display issue for ... windows!
-    10c32df [Arno V]: war: do not scp on freaking windows, it doesn&#39;t work
+    10c32df [Arno V]: war: do not scp on freaking windows, it doesn't work
     5a037a0 [Arno V]: war: missing package dependency
     7c33045 [Arno V]: war: fix typo
     526ed4d [Arno V]: WAR: using own version of scp (using ssh2) instead of scp2 which is buggy
@@ -391,7 +277,7 @@ __0.0.70 / 2014-01-10__
     a58ca3b [Arno V]: WAR: the name of the local WAR file has changed
     5c9979d [Arno V]: WAR: sh* load of changes
     9854131 [Arno V]: WAR: prevent remote and local build from reporting elapsed time twice
-    dc0a12a [Arno V]: Fix prompt of type &#39;password&#39; to prevent empty password
+    dc0a12a [Arno V]: Fix prompt of type 'password' to prevent empty password
     b51163a [Arno V]: war: setting remote flag
     10710d5 [Arno V]: war: update
     065ae63 [Arno V]: war: update
@@ -403,49 +289,43 @@ __0.0.70 / 2014-01-10__
 
 __0.0.69 / 2014-01-07__
 
-    cee2528 [Arno V]: Publishing npm release 0.0.69
-    83ebae6 [Arno V]: Updating HISTORY
     7e1f2dc [Arno V]: Fixing lint errors!
     eae3c39 [Arno V]: Removing obsolete script
     3c494d4 [Arno V]: Making sure that shifter, yogi and maven are installed to actually run a WAR build
-    f9b519a [Arno V]: Adding &#39;isAppInstalled&#39; to utilities and removing the script that was used to check yogi&#x2F;shifter at installation time. This fixes issue #19
+    f9b519a [Arno V]: Adding 'isAppInstalled' to utilities and removing the script that was used to check yogi/shifter at installation time. This fixes issue #19
     7255d40 [Arno V]: webapp: fedtools helper update
     4822be3 [Arno V]: webapp: adding debug js files generation at build time (on top of min)
     c516e52 [Arno V]: webapp: using fedtools-maven-plugin 0.0.3
-    3a00bde [Arno V]: webapp: updating jshint and calling it from &#39;build&#39;
+    3a00bde [Arno V]: webapp: updating jshint and calling it from 'build'
     14e057a [Arno V]: webapp: i18n java side
     de865ab [Arno V]: webapp: first pass at README.md
 
 __0.0.68 / 2014-01-05__
 
-    71891f5 [Arno V]: Publishing npm release 0.0.68
-    f5392fc [Arno V]: Updating HISTORY
     1239e6a [Arno V]: webapp: default tags are now 2.2.0-SNAPSHOT
     2fe5341 [Arno V]: webapp: refactoring the extended flow
 
 __0.0.67 / 2014-01-05__
 
-    47f3b7c [Arno V]: Publishing npm release 0.0.67
-    0149146 [Arno V]: Updating HISTORY
     fbf15b1 [Arno V]: webapp: adding an extended flow to showcase containers and grids
     5d9b4d2 [Arno V]: webapp: adding a few default css rules
     7798b22 [Arno V]: webapp: add scss to grunt watch
     5c93bd0 [Arno V]: webapp: grunt watch update
     345fcf8 [Arno V]: webapp: renaming pagex.js into modulex.js
     62859f9 [Arno V]: webapp: some cleanup for flow creation
-    7d7795d [Arno V]: webapp: preventing creation of flow named &#39;common&#39;
+    7d7795d [Arno V]: webapp: preventing creation of flow named 'common'
     ca1dcc4 [Arno V]: webapp: adding custom CSS support
-    ab5e5b6 [Arno V]: webapp: change &lt;head title&gt; to name-version of app
+    ab5e5b6 [Arno V]: webapp: change <head title> to name-version of app
     421446c [Arno V]: webapp: better final wording during skeleton bootstrap
     8f70542 [Arno V]: webapp: moving common js script from common template to flows (that need it)
     1905e70 [Arno V]: webapp: grunt-minifier more generic
-    56b49ee [Arno V]: Adding a special option for &#39;fedtools bump&#39;: build or combo
+    56b49ee [Arno V]: Adding a special option for 'fedtools bump': build or combo
     620d4ca [Arno V]: Fixing fedtools bump (invalid path option)
     abbc246 [Arno V]: Fixing json file update (to keep indentation instead of flattening the file)
-    fe9e039 [Arno V]: Merge pull request #21 from aversini&#x2F;webapp
+    fe9e039 [Arno V]: Merge pull request #21 from aversini/webapp
     e6fa22f [Arno V]: webapp: fixing utf8 trailing character
-    cfdfdbb [Arno V]: webapp: including &#39;mvn clean&#39; to bootstrap
-    1291176 [Arno V]: webapp: renaming default first flow to &#39;home&#39;
+    cfdfdbb [Arno V]: webapp: including 'mvn clean' to bootstrap
+    1291176 [Arno V]: webapp: renaming default first flow to 'home'
     7c00955 [Arno V]: webapp: adding build time information
     4d584b5 [Arno V]: webapp: cleanup appnav example
     c3f1568 [Arno V]: webapp: fix multiple flows minification
@@ -456,67 +336,41 @@ __0.0.67 / 2014-01-05__
     68e88d4 [Arno V]: webapp: small cleanup
     56af254 [Arno V]: webapp: update
     03f0a35 [Arno V]: webapp work in progress
-    b521337 [Arno V]: Merge branch &#39;refs&#x2F;heads&#x2F;master&#39; into webapp
+    b521337 [Arno V]: Merge branch 'refs/heads/master' into webapp
     9298da5 [Arno V]: work in progress
     77844dc [Arno V]: First commit for webapp
 
-__0.0.66 / 2014-01-01__
-
-    f53e51b [Arno V]: Publishing npm release 0.0.66
-
 __0.0.65 / 2014-01-01__
 
-    9def9cc [Arno V]: Publishing npm release 0.0.65
-    7b89515 [Arno V]: Updating HISTORY
     e4fd7ad [Arno V]: Better wording at the end of a WAR build
-    77e2c61 [Arno V]: Merge pull request #20 from aversini&#x2F;war
+    77e2c61 [Arno V]: Merge pull request #20 from aversini/war
     7892bb9 [Arno V]: Fixing WAR build: new war location
     9ea8b52 [Arno V]: Some cleanup
     27c5de4 [Arno V]: Add a new git helper command: getCurrent SHA
-    3fbead8 [Arno V]: Merge branch &#39;war&#39; of https:&#x2F;&#x2F;github.com&#x2F;aversini&#x2F;fedtools into war
+    3fbead8 [Arno V]: Merge branch 'war' of https://github.com/aversini/fedtools into war
     7bf4469 [Arno V]: WAR: asking for branch and yui3 branch
     80eb6e8 [Arno V]: work in progress: trying to externalize wf2 build from maven
     18937ee [Arno V]: WAR: asking for branch and yui3 branch
     364fe66 [Arno V]: work in progress: trying to externalize wf2 build from maven
 
-__0.0.64 / 2013-12-20__
-
-    aa3b314 [Arno V]: Publishing npm release 0.0.64
-
 __0.0.63 / 2013-12-20__
 
-    8a9f694 [Arno V]: Publishing npm release 0.0.63
-    19e2c37 [Arno V]: Updating HISTORY
     a7aebb7 [Arno V]: Adding utilities.wria2bump to increase the version of the framework
 
 __0.0.62 / 2013-12-19__
 
-    b665d82 [Arno V]: Publishing npm release 0.0.62
-    5991d0b [Arno V]: Updating HISTORY
-    36e3b7f [Arno V]: Fix for Mac&#x2F;Linux (bleed from windows previous fix…)
-
-__0.0.61 / 2013-12-19__
-
-    5d0fc7d [Arno V]: Publishing npm release 0.0.61
+    36e3b7f [Arno V]: Fix for Mac/Linux (bleed from windows previous fix…)
 
 __0.0.60 / 2013-12-19__
 
-    8cf4ebe [Arno V]: Publishing npm release 0.0.60
-    fef00b2 [Arno V]: Updating HISTORY
     92cc37e [Arno V]: Enabling WAR creation for poor windows users
     6a343ff [Arno V]: Making windows commands happy
 
-__0.0.59 / 2013-12-18__
-
-    24ca752 [Arno V]: Publishing npm release 0.0.59
-
 __0.0.58 / 2013-12-18__
 
-    5db9045 [Arno V]: Publishing npm release 0.0.58
-    4a2b89a [Arno V]: Updating HISTORY
     b5749fb [Arno V]: Minor typo
-    adbc806 [Arno V]: Enabling WAR for linux&#x2F;Mac
-    5df3ba7 [Arno V]: Using &#39;utilities.getTemporaryDir()&#39;
+    adbc806 [Arno V]: Enabling WAR for linux/Mac
+    5df3ba7 [Arno V]: Using 'utilities.getTemporaryDir()'
     1f20d68 [Arno V]: Creating API to create temporary dir for fedtools
     f542418 [Arno V]: typo
     04667e8 [Arno V]: Adding YUI3 clone to the WAR creation process
@@ -525,98 +379,69 @@ __0.0.58 / 2013-12-18__
     6775db1 [Arno V]: Refactoring WAR creation
     d370a61 [Arno V]: Adding the option to have no default value from a prompt by passing undefined as the default value!
     9bd47b5 [Arno V]: Adding extra options to git clone
-    acaf858 [Arno V]: Default branch is now &#39;develop&#39;
-
-__0.0.57 / 2013-12-16__
-
-    b1dbaec [Arno V]: Publishing npm release 0.0.57
+    acaf858 [Arno V]: Default branch is now 'develop'
 
 __0.0.56 / 2013-12-16__
 
-    642e619 [Arno V]: Publishing npm release 0.0.56
-    509ee61 [Arno V]: Updating HISTORY
     fd24a53 [Arno V]: Updating README to talk about module creation
     63c7f59 [Arno V]: Adding gitignore file per created module
     d7157bf [Arno V]: Fix module creation if not wria2 repo
     adb6f4a [Arno V]: Fixing module creation issue #18
     3f7550a [Arno V]: If combo is disabled, default is to continue disabled
 
-__0.0.55 / 2013-12-14__
-
-    5a5354f [Arno V]: Publishing npm release 0.0.55
-
 __0.0.54 / 2013-12-14__
 
-    90f0394 [Arno V]: Publishing npm release 0.0.54
-    7b383b2 [Arno V]: Updating HISTORY
     a38d0fb [Arno V]: Disabling WAR génération completely (wria2 repo is not ready)
 
 __0.0.53 / 2013-12-14__
 
-    db3bf78 [Arno V]: Publishing npm release 0.0.53
-    eb85d8a [Arno V]: Updating HISTORY
-    296d18a [Arno V]: Merge pull request #17 from aversini&#x2F;war
+    296d18a [Arno V]: Merge pull request #17 from aversini/war
     eac634e [Arno V]: Temporarily disabling WAR generation for Windows
     1278681 [Arno V]: Using os specific tmp directory
     eb7a8ad [Arno V]: ignoring sublime project files
     7af9bce [Arno V]: making windows happy (gawk vs awk and \r\n vs \n)
     4e1c1f0 [Arno V]: Better wording for WAR build
     730d21e [Arno V]: Adding WAR generation as a new fedtools command
-    0e8c2c5 [Arno V]: Merge pull request #16 from gurumvg&#x2F;issue#14
+    0e8c2c5 [Arno V]: Merge pull request #16 from gurumvg/issue#14
     1bbc2b9 [Venkataguru Mitta]: Fixing issue#14
     7797ebd [Arno V]: Adding name and version to package to fix issue #15
-    b30af0c [Arno V]: Merge branch &#39;master&#39; of https:&#x2F;&#x2F;github.com&#x2F;aversini&#x2F;fedtools
-    42aa02e [Arno V]: Removing hash from HISTORY... doesn&#39;t show up in github
+    b30af0c [Arno V]: Merge branch 'master' of https://github.com/aversini/fedtools
+    42aa02e [Arno V]: Removing hash from HISTORY... doesn't show up in github
     e9f2796 [Arno V]: Update HISTORY.md
 
 __0.0.52 / 2013-12-10__
 
-    d439315 [Arno V]: Publishing npm release 0.0.52
-    3edde5e [Arno V]: Updating HISTORY
     3e802df [Arno V]: using full commit hash so that Github is happy
 
 __0.0.51 / 2013-12-10__
 
-    2f51b1e [Arno V]: Publishing npm release 0.0.51
-    7e27974 [Arno V]: Updating HISTORY
     24056fe [Arno V]: Removing debug from Gruntfile
     dbaab82 [Arno V]: Adding abbreviated commit hash to HISTORY logs
 
 __0.0.50 / 2013-12-10__
 
-    1cef151 [Arno V]: Publishing npm release 0.0.50
-    bad9e16 [Arno V]: Updating HISTORY
     755ef27 [Arno V]: Cleaning up package dependencies
 
 __0.0.49 / 2013-12-10__
 
-    c238c48 [Arno V]: Publishing npm release 0.0.49
-    d4e2aef [Arno V]: Updating HISTORY
     68d1377 [Arno V]: fixing script to detect shifter and yogi
-    22a4459 [Arno V]: missing script to check for yogi&#x2F;shifter
+    22a4459 [Arno V]: missing script to check for yogi/shifter
     fbad9fa [Arno V]: Removing shifter and yogi dependency - just error message if not installed
 
 __0.0.48 / 2013-12-10__
 
-    73acba8 [Arno V]: Publishing npm release 0.0.48
-    47dd5a6 [Arno V]: Updating HISTORY
     c790a1f [Arno V]: Bundling shifter and yogi to try to ease the installation part of fedtools
     2636d7a [Arno V]: fix typo
 
 __0.0.47 / 2013-12-10__
 
-    6ddc512 [Arno V]: Publishing npm release 0.0.47
-    0f61999 [Arno V]: &quot;Updating HISTORY&quot;
     9782f14 [Arno V]: Fix history versioning with the latest tag
     062243f [Arno V]: Fixing history version
 
 __0.0.46 / 2013-12-10__
 
-    8564d3a [Arno V]: Publishing npm release 0.0.46
-    dc3b7cc [Arno V]: &quot;Updating HISTORY&quot;
-    baa584a [Arno V]: Merge pull request #13 from aversini&#x2F;history
+    baa584a [Arno V]: Merge pull request #13 from aversini/history
     fe2e83a [Arno V]: Adding commit history grunt task
-    d87e81f [Arno V]: &quot;Updating HISTORY&quot;
     0698384 [Arno V]: work in progress
     01e0c93 [Arno V]: Adding HISTORY.md
 
@@ -624,7 +449,7 @@ __0.0.45 / 2013-12-09__
 
     9283f56 [Arno V]: release 0.0.45
     ad045eb [Arno V]: Component build optimization
-    7df939b [Arno V]: Merge pull request #12 from gurumvg&#x2F;issue#11
+    7df939b [Arno V]: Merge pull request #12 from gurumvg/issue#11
     08c34db [Venkataguru Mitta]: Removing even wf2-compass.js entry in build.json for js modules.
     a54256b [Venkataguru Mitta]: Removing even CSS_PREFIX template for js modules
     f6b698a [Venkataguru Mitta]: Fixing issue#11
@@ -636,7 +461,7 @@ __0.0.44 / 2013-12-06__
     5764680 [Arno V]: Removing old unused files
     649c1de [Arno V]: Grunt release check task: proxy or no proxy option
     24b1bbe [Arno V]: Adding node:true to jshint options for git hooks
-    b0250c1 [Arno V]: Externalizing &#39;installLocalNpmPackages&#39; to utilities
+    b0250c1 [Arno V]: Externalizing 'installLocalNpmPackages' to utilities
     32bc240 [Arno V]: Refining help page a little bit
 
 __0.0.43 / 2013-12-05__
@@ -646,9 +471,9 @@ __0.0.43 / 2013-12-05__
 __0.0.42 / 2013-12-05__
 
     dc9d349 [Arno V]: release 0.0.42
-    a181b4a [Arno V]: Merge pull request #8 from gurumvg&#x2F;add-yuidoc-support
-    a1d2adc [Arno V]: Merge pull request #10 from gerardkcohen&#x2F;meta-json
-    38925a9 [Gerard K. Cohen]: Issue #9: Add &#39;base-build&#39; to meta.json requires
+    a181b4a [Arno V]: Merge pull request #8 from gurumvg/add-yuidoc-support
+    a1d2adc [Arno V]: Merge pull request #10 from gerardkcohen/meta-json
+    38925a9 [Gerard K. Cohen]: Issue #9: Add 'base-build' to meta.json requires
     2a95398 [Venkataguru Mitta]: #7 - Add a commad to View API Docs
 
 __0.0.41 / 2013-12-04__
@@ -690,7 +515,7 @@ __0.0.35 / 2013-12-03__
 __0.0.34 / 2013-12-03__
 
     9b46920 [Arno V]: release 0.0.34
-    4b6c593 [Arno V]: Adding &#39;wss&#39; or &#39;wria2-selleck&#39; to start Selleck to server example pages
+    4b6c593 [Arno V]: Adding 'wss' or 'wria2-selleck' to start Selleck to server example pages
     87e1a71 [Arno V]: Adding the possibility to start a server (selleck is the first one)
 
 __0.0.33 / 2013-12-02__
@@ -720,7 +545,7 @@ __0.0.30 / 2013-12-01__
 __0.0.29 / 2013-12-01__
 
     5e2e8f2 [Arno V]: release 0.0.29
-    58f261e [Arno V]: Reorganization of the help results for narrower terminals (I&#39;m looking at you Windows)
+    58f261e [Arno V]: Reorganization of the help results for narrower terminals (I'm looking at you Windows)
     9155f3f [Arno V]: Adding 2 new utilities: isWindows and wordWrap
     82aaa95 [Arno V]: Reducing the max length of a status message to accommodate windows shells (much narrower and not easy to resize)
     d7234c2 [Arno V]: More explicit message for commit failure on empty JIRA ticket
@@ -733,7 +558,7 @@ __0.0.28 / 2013-11-28__
 __0.0.27 / 2013-11-27__
 
     fd78872 [Arno V]: release 0.0.27
-    7d30071 [Arno V]: replacing &quot;rm -rf&quot; and &quot;mkdir -p&quot; with native nodejs packages
+    7d30071 [Arno V]: replacing "rm -rf" and "mkdir -p" with native nodejs packages
 
 __0.0.26 / 2013-11-27__
 
@@ -748,7 +573,7 @@ __0.0.25 / 2013-11-26__
 __0.0.24 / 2013-11-26__
 
     8b02d60 [Arno V]: release 0.0.24
-    5e1b724 [Arno V]: Adding option to enter a &#39;gitlab id&#39; for the git repo
+    5e1b724 [Arno V]: Adding option to enter a 'gitlab id' for the git repo
     bd51d1a [Arno V]: Fixing missing path for full build
 
 __0.0.23 / 2013-11-26__
@@ -759,7 +584,7 @@ __0.0.22 / 2013-11-26__
 
     ca8b6a3 [Arno V]: release 0.0.22
     3298428 [Arno V]: Fixing automatic build confirmation
-    f784944 [Arno V]: Merge branch &#39;master&#39; of https:&#x2F;&#x2F;github.com&#x2F;aversini&#x2F;fedtools
+    f784944 [Arno V]: Merge branch 'master' of https://github.com/aversini/fedtools
     707f836 [Arno V]: Better error handling of invalid YUI3 branch
     a6ce445 [Arno V]: Adding fetch to git checkout helper
 
@@ -771,7 +596,7 @@ __0.0.21 / 2013-11-25__
 __0.0.20 / 2013-11-25__
 
     42b9483 [Arno V]: release 0.0.20
-    ec8a988 [Arno V]: Adding &#39;watch&#39; option
+    ec8a988 [Arno V]: Adding 'watch' option
 
 __0.0.19 / 2013-11-25__
 
@@ -796,7 +621,7 @@ __0.0.16 / 2013-11-23__
     1fe2301 [Arno V]: removing dead code
     68ecf6f [Arno V]: Adding the combo option to the bootstrap flow
     b7a9816 [Arno V]: Adding the option to bypass build confirmation, as well as to update the shifter.json if needed (for combo or not)
-    95f9bb3 [Arno V]: Using my shifter until the gear&#x2F;gear-lib dependency is fixed
+    95f9bb3 [Arno V]: Using my shifter until the gear/gear-lib dependency is fixed
     c8416a2 [Arno V]: If command is too long, display only the binary in the command execution
     a568028 [Arno V]: Addinf shifter and yogi to local dependencies
     69c397e [Arno Versini]: work in progress
@@ -818,7 +643,7 @@ __0.0.14 / 2013-11-21__
 __0.0.13 / 2013-11-21__
 
     6732695 [Arno V]: release 0.0.13
-    f1af52b [Arno V]: wria2-mod: name &#39;wf-xyz&#39; is equivalent to &#39;xyz&#39;
+    f1af52b [Arno V]: wria2-mod: name 'wf-xyz' is equivalent to 'xyz'
     cedb9ae [Arno V]: Adding wt2 creation
 
 __0.0.12 / 2013-11-21__
