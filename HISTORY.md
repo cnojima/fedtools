@@ -1,4 +1,10 @@
 
+__0.0.120 / 2014-05-26__
+
+    80e2d83 [Arno V]: Publishing npm release 0.0.120
+    6893b66 [Arno V]: Adding &#39;pre-release&#39; grunt task
+    1fbf3b2 [Arno V]: Updating HISTORY
+
 __0.0.119 / 2014-05-26__
 
     7de890c [Arno V]: Publishing npm release 0.0.119
