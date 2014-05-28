@@ -1,4 +1,8 @@
 
+__0.0.122 / 2014-05-28__
+
+    9c8164a [Arno V]: Using utilities.openInBrowser() instead of re-inventing the wheel all the time
+
 __0.0.121 / 2014-05-27__
 
     eaadf61 [Arno V]: Updating grunt history to ignore some commits
