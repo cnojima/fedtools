@@ -1,4 +1,8 @@
 
+__0.0.123 / 2014-05-28__
+
+    2961c3b [Arno V]: Using the new 'trigger' option from the cmd.run method (for serve and selleck)
+
 __0.0.122 / 2014-05-28__
 
     9c8164a [Arno V]: Using utilities.openInBrowser() instead of re-inventing the wheel all the time
