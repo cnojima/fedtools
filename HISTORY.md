@@ -1,4 +1,8 @@
 
+__0.0.124 / 2014-06-01__
+
+    ec1903d [Arno V]: typo (thanks Skylar)
+
 __0.0.123 / 2014-05-28__
 
     2961c3b [Arno V]: Using the new 'trigger' option from the cmd.run method (for serve and selleck)
