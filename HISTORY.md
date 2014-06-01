@@ -1,4 +1,8 @@
 
+__0.0.125 / 2014-06-01__
+
+    39c3046 [Arno V]: Locking fedtools-logs dependency
+
 __0.0.124 / 2014-06-01__
 
     ec1903d [Arno V]: typo (thanks Skylar)
