@@ -1,4 +1,9 @@
 
+__0.0.126 / 2014-06-02__
+
+    2e235c4 [Arno V]: Adding minimum unit-tests... need to come up with something to test real flows
+    4048eef [Arno V]: Migrating to fedtools-logs v0.1.x
+
 __0.0.125 / 2014-06-01__
 
     39c3046 [Arno V]: Locking fedtools-logs dependency
