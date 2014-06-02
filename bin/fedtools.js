@@ -158,7 +158,7 @@ if (program.version || program.V) {
 }
 
 if (program.boring) {
-  log.setBoring();
+  log.boring = true;
 }
 
 if (program.debug) {
@@ -170,7 +170,7 @@ if (program.debug) {
 /**************************/
 if (program.r || program.remote) {
   remote = true;
-  log.setRemote();
+  log.remote = true;
 }
 
 // Other hidden options for remote action (building a WAR file).
