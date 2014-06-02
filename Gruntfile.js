@@ -66,7 +66,20 @@ module.exports = function (grunt) {
 
   // register running tasks
   grunt.registerTask('default', ['help']);
-  grunt.registerTask('publish', ['pre-release', 'release', 'history']);
+  grunt.registerTask('publish', ['pre-release', 'test', 'release', 'history']);
+
+  grunt.registerTask('test', 'Run code coverage and unit tests', function () {
+    var done = this.async();
+    grunt.util.spawn({
+      cmd: 'npm',
+      args: ['test']
+    }, function (err, data) {
+      if (!err) {
+        grunt.log.write(data);
+      }
+      done(err);
+    });
+  });
 
   grunt.registerTask('pre-release', 'Checking if we can release', function () {
     var done = this.async();

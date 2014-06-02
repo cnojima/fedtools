@@ -20,7 +20,7 @@
     "url": "https://github.com/aversini/fedtools/issues"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha"
   },
   "preferGlobal": true,
   "dependencies": {
@@ -50,6 +50,7 @@
     "underscore": "~1.5.2"
   },
   "devDependencies": {
+    "chai": "*",
     "grunt": "~0.4.2",
     "grunt-cli": "~0.1.11",
     "grunt-contrib-watch": "*",
@@ -61,7 +62,9 @@
     "grunt-mkdir": "*",
     "grunt-shell": "*",
     "grunt-contrib-yuidoc": "*",
+    "istanbul": "*",
     "load-grunt-tasks": "*",
+    "mocha": "*",
     "semver": "*"
   },
   "keywords": [
