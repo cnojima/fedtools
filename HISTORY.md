@@ -1,4 +1,8 @@
 
+__0.0.128 / 2014-06-03__
+
+    11e1884 [Arno V]: Adding visual notifications to build and bootstrap
+
 __0.0.127 / 2014-06-02__
 
     ae624e4 [Arno V]: typo (missing space)
