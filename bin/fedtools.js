@@ -14,6 +14,7 @@ var fs = require('fs'),
   path = require('path'),
   log = require('fedtools-logs'),
   utilities = require('fedtools-utilities'),
+  notifier = require('fedtools-notifier'),
 
   build = require('../lib/wria2-build'),
 
@@ -321,11 +322,19 @@ case 'wb': // hidden menu
     cwd: process.cwd(),
     prompt: true,
     type: build.TYPE_BUILD
-  }, function (err) {
+  }, function (err, stderr) {
     if (err && err !== -1) {
-      log.echo(err);
+      notifier.notify({
+        message: 'Build failed...',
+        sound: 'Blow'
+      });
+      log.echo(stderr);
     }
     if (!err) {
+      notifier.notify({
+        message: 'Build was successful',
+        sound: 'Glass'
+      });
       utilities.timeTracker('stop');
     }
     log.echo();
@@ -338,6 +347,11 @@ case 'wi': // hidden menu
   require('../lib/wria2-bootstrap').bootstrapRepository(debug, pkgConfig, function (err) {
     if (err) {
       log.error(err);
+    } else {
+      notifier.notify({
+        message: 'Bootstrap was successful',
+        sound: 'Glass'
+      });
     }
     log.echo();
   });
