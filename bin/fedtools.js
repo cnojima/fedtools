@@ -307,6 +307,10 @@ case 'tgz': // hidden menu
     }
     if (!remote) {
       if (!err) {
+        notifier.notify({
+          message: 'Build was successful',
+          sound: 'Glass'
+        });
         utilities.timeTracker('stop');
       }
       log.echo();
