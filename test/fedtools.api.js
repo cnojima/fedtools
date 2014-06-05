@@ -15,7 +15,7 @@ describe('wria2-bootstrap#api', function () {
 
 describe('serve#api', function () {
   it('should be a function', function () {
-    expect(serve.serve).to.be.a('function');
+    expect(serve.serveApi).to.be.a('function');
   });
 });
 
