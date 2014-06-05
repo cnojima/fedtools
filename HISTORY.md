@@ -1,4 +1,9 @@
 
+__0.0.129 / 2014-06-04__
+
+    4309b3b [Arno V]: Moving selleck and yuidoc server commands to 'deprecated' file - still available... for now
+    a06231b [Arno V]: Adding notification after a war build
+
 __0.0.128 / 2014-06-03__
 
     11e1884 [Arno V]: Adding visual notifications to build and bootstrap
