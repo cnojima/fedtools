@@ -22,6 +22,7 @@ var fs = require('fs'),
   argv,
   debug = false,
   remote = false,
+  write = true,
   command = '',
   packageFileJson = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8')),
   pkgVersion = packageFileJson.version,
@@ -142,7 +143,7 @@ argv = require('optimist')
   .describe('b', 'do not use color output')
   .alias('d', 'debug')
   .describe('d', 'display extra information')
-  .boolean(['b', 'd', 'V', 'v', 'h']);
+  .boolean(['b', 'd', 'V', 'v', 'h', 'n']);
 
 program = argv.argv;
 
@@ -175,6 +176,10 @@ if (program.r || program.remote) {
   log.remote = true;
 }
 
+if (program.write !== undefined && program.write === false) {
+  write = false;
+}
+
 // Other hidden options for remote action (building a WAR file).
 // These options are hidden because users should not use them.
 // They are only intended for the remote fedtools job that runs on
@@ -196,6 +201,10 @@ if (program._.length === 0 || program._.length > 1) {
 } else {
   command = program._[0];
 }
+
+// Debug if needed
+log.debug('program: ', program);
+log.debug('command: ', command);
 
 /*******************/
 /* Geronimo!       */
@@ -288,6 +297,7 @@ case 'tgz': // hidden menu
   utilities.timeTracker('start');
   log.echo();
   build.run(debug, {
+    write: write,
     remote: remote,
     username: program.u,
     useremail: program.e,

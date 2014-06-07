@@ -5,6 +5,7 @@ var build = require('../lib/wria2-build'),
   appBootstrap = require('../lib/app-bootstrap'),
   war = require('../lib/wria2-package'),
   logs = require('fedtools-logs'),
+  utilities = require('fedtools-utilities'),
   chai = require('chai');
 
 chai.should();
@@ -16,5 +17,6 @@ global.serve = serve;
 global.modules = modules;
 global.logs = logs;
 global.war = war;
+global.utilities = utilities;
 
 global.expect = chai.expect;
