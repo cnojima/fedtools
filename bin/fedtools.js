@@ -164,6 +164,7 @@ if (program.boring) {
 
 if (program.debug) {
   debug = true;
+  log.verbose = true;
 }
 
 /**************************/
@@ -300,7 +301,7 @@ case 'tgz': // hidden menu
     cwd: process.cwd(),
     prompt: true,
     type: build.TYPE_WAR
-  }, function (err) {
+  }, function (err, msg) {
     if (err && err !== -1) {
       log.echo(err);
       process.exit(127);
@@ -308,7 +309,7 @@ case 'tgz': // hidden menu
     if (!remote) {
       if (!err) {
         notifier.notify({
-          message: 'Build was successful',
+          message: msg || 'Build was successful',
           sound: 'Glass'
         });
         utilities.timeTracker('stop');
