@@ -1,4 +1,8 @@
 
+__0.0.134 / 2014-06-08__
+
+    0aeafae [Arno V]: Another casualty of the merge...
+
 __0.0.133 / 2014-06-08__
 
     f9619e7 [Arno V]: Fixing merge gone rogue
