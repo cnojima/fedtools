@@ -396,7 +396,7 @@ case 'server': // hidden menu
     break;
   } else {
     log.echo();
-    require('../lib/wria2-serve').serve(debug, {
+    require('../lib/wria2-serve').serveApi(debug, {
       file: program.f
     }, function () {});
   }
