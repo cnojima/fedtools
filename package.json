@@ -24,21 +24,21 @@
   },
   "preferGlobal": true,
   "dependencies": {
-    "async": "~0.2.9",
+    "async": "~0.9.0",
     "fedtools-commands": "*",
     "fedtools-logs": "~0.1.1",
     "fedtools-notifier": "*",
     "fedtools-utilities": "*",
     "glob": "~3.2.7",
     "mkdirp": "~0.5.0",
-    "moment": "~2.4.0",
-    "mustache": "~0.7.3",
+    "moment": "~2.6.0",
+    "mustache": "~0.8.1",
     "ncp": "~0.4.2",
     "optimist": "~0.6.0",
     "rimraf": "~2.2.2",
     "simple-boilerplate": "~0.0.1",
     "tar.gz": "~0.1.1",
-    "underscore": "~1.5.2"
+    "underscore": "~1.6.0"
   },
   "devDependencies": {
     "chai": "*",
