@@ -1,4 +1,11 @@
 
+__0.0.130 / 2014-06-07__
+
+    eb9f1c4 [Arno V]: Merge pull request #33 from aversini/builder
+    d52cc59 [Arno V]: updating due to API change
+    a17d453 [Arno V]: More unit tests for war builder + starting to add a 'dry-run' option
+    1747087 [Arno V]: First pass at refactoring WAR building
+
 __0.0.129 / 2014-06-04__
 
     4309b3b [Arno V]: Moving selleck and yuidoc server commands to 'deprecated' file - still available... for now
