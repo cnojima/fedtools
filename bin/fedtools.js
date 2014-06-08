@@ -22,6 +22,7 @@ var fs = require('fs'),
   argv,
   debug = false,
   remote = false,
+  write = true,
   command = '',
   packageFileJson = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8')),
   pkgVersion = packageFileJson.version,
@@ -142,7 +143,7 @@ argv = require('optimist')
   .describe('b', 'do not use color output')
   .alias('d', 'debug')
   .describe('d', 'display extra information')
-  .boolean(['b', 'd', 'V', 'v', 'h']);
+  .boolean(['b', 'd', 'V', 'v', 'h', 'n']);
 
 program = argv.argv;
 
@@ -164,6 +165,7 @@ if (program.boring) {
 
 if (program.debug) {
   debug = true;
+  log.verbose = true;
 }
 
 /**************************/
@@ -172,6 +174,10 @@ if (program.debug) {
 if (program.r || program.remote) {
   remote = true;
   log.remote = true;
+}
+
+if (program.write !== undefined && program.write === false) {
+  write = false;
 }
 
 // Other hidden options for remote action (building a WAR file).
@@ -195,6 +201,10 @@ if (program._.length === 0 || program._.length > 1) {
 } else {
   command = program._[0];
 }
+
+// Debug if needed
+log.debug('program: ', program);
+log.debug('command: ', command);
 
 /*******************/
 /* Geronimo!       */
@@ -287,6 +297,7 @@ case 'tgz': // hidden menu
   utilities.timeTracker('start');
   log.echo();
   build.run(debug, {
+    write: write,
     remote: remote,
     username: program.u,
     useremail: program.e,
@@ -300,7 +311,7 @@ case 'tgz': // hidden menu
     cwd: process.cwd(),
     prompt: true,
     type: build.TYPE_WAR
-  }, function (err) {
+  }, function (err, msg) {
     if (err && err !== -1) {
       log.echo(err);
       process.exit(127);
@@ -308,7 +319,7 @@ case 'tgz': // hidden menu
     if (!remote) {
       if (!err) {
         notifier.notify({
-          message: 'Build was successful',
+          message: msg || 'Build was successful',
           sound: 'Glass'
         });
         utilities.timeTracker('stop');
@@ -385,7 +396,7 @@ case 'server': // hidden menu
     break;
   } else {
     log.echo();
-    require('../lib/wria2-serve').serve(debug, {
+    require('../lib/wria2-serve').serveApi(debug, {
       file: program.f
     }, function () {});
   }
