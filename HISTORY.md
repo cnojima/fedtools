@@ -1,4 +1,8 @@
 
+__0.0.132 / 2014-06-07__
+
+    18ed97e [Arno V]: well what do you know.. not working on f*ing windows so disabling for f*ing windows
+
 __0.0.131 / 2014-06-07__
 
     d3edbe1 [Arno V]: Adding notifications to fedtools wria-watch
