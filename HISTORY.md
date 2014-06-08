@@ -1,4 +1,8 @@
 
+__0.0.133 / 2014-06-08__
+
+    f9619e7 [Arno V]: Fixing merge gone rogue
+
 __0.0.132 / 2014-06-07__
 
     18ed97e [Arno V]: well what do you know.. not working on f*ing windows so disabling for f*ing windows
