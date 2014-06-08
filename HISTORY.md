@@ -1,4 +1,8 @@
 
+__0.0.131 / 2014-06-07__
+
+    d3edbe1 [Arno V]: Adding notifications to fedtools wria-watch
+
 __0.0.130 / 2014-06-07__
 
     eb9f1c4 [Arno V]: Merge pull request #33 from aversini/builder
