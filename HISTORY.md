@@ -1,4 +1,12 @@
 
+__0.0.135 / 2014-06-08__
+
+    273d078 [Arno V]: updating `glob` and `ncp` to latest stable version
+    312cf33 [Arno V]: updating to latest stable version for `async`, `moment`, `mustache` and `underscore`
+    03b4520 [Arno V]: Cleaning up more dependencies
+    3ff65f8 [Arno V]: Removing extra dependency
+    b962bf7 [Arno V]: Adding logic so that the warbuilder password is only asked once a week
+
 __0.0.134 / 2014-06-08__
 
     0aeafae [Arno V]: Another casualty of the merge...
