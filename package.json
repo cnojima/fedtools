@@ -34,6 +34,7 @@
     "moment": "~2.6.0",
     "mustache": "~0.8.1",
     "ncp": "~0.5.1",
+    "node-polyglot": "~0.4.0",
     "optimist": "~0.6.0",
     "rimraf": "~2.2.2",
     "simple-boilerplate": "~0.0.1",

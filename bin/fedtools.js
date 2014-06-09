@@ -12,12 +12,15 @@
 
 var fs = require('fs'),
   path = require('path'),
+  Polyglot = require('node-polyglot'),
   log = require('fedtools-logs'),
   utilities = require('fedtools-utilities'),
   notifier = require('fedtools-notifier'),
 
   build = require('../lib/wria2-build'),
 
+  locales = {},
+  polyglot,
   program,
   argv,
   debug = false,
@@ -30,58 +33,65 @@ var fs = require('fs'),
   pkgName = packageFileJson.name,
 
   commandList = [],
-  fedToolsCommands = {
-    'af': {
-      'full': 'app-flow',
-      'description': 'Generates a single webapp flow skeleton from scratch.'
-    },
-    'ai': {
-      'full': 'app-init',
-      'description': 'Generates a full webapp skeleton from scratch.'
-    },
-    'bump': {
-      'description': 'Update the version of the WF-RIA2 framework in all the files (pom.xml, shifter, etc).'
-    },
-    'war': {
-      'full': 'wria2-war',
-      'description': 'Generate a wria2 WAR file ready to be deployed to a CI server or to your own JSP container.'
-    },
-    'wss': {
-      'full': 'wria2-sel',
-      'description': 'Start Selleck to serve example pages for the wria2 framework.'
-    },
-    'wa': {
-      'full': 'wria2-api',
-      'description': 'Start YUIDoc server to view API docs of the wria2 framework.'
-    },
-    'ws': {
-      'full': 'wria2-soy',
-      'description': 'Build all the Soy templates.'
-    },
-    'wi': {
-      'full': 'wria2-init',
-      'description': 'Bootstrap a local wria2 git repository (clone, hooks, synchornize with yui3, etc.)'
-    },
-    'wb': {
-      'full': 'wria2-build',
-      'description': 'Run a full wria2 build or a single component build depending on the current path.'
-    },
-    'ww': {
-      'full': 'wria2-watch',
-      'description': 'Watch and compile a full wria2 source tree or a single component depending on the current path.'
-    },
-    'wy': {
-      'full': 'wria2-yui3',
-      'description': 'Synchronize a local repository with the latest YUI3 code (provided by wria).'
-    },
-    'wm': {
-      'full': 'wria2-mod',
-      'description': 'Create a new module (skeleton code, including unit tests and documentation).'
-    },
-    'serve': {
-      'description': 'Serve your local copy of the WF-RIA2 framework examples/API.'
-    }
-  };
+  fedToolsCommands = {};
+
+locales.en = require('../data/i18n/common/en_US');
+polyglot = new Polyglot({
+  phrases: locales.en
+});
+
+fedToolsCommands = {
+  'af': {
+    'full': 'app-flow',
+    'description': polyglot.t('commands.af')
+  },
+  'ai': {
+    'full': 'app-init',
+    'description': polyglot.t('commands.ai')
+  },
+  'bump': {
+    'description': polyglot.t('commands.bump')
+  },
+  'war': {
+    'full': 'wria2-war',
+    'description': polyglot.t('commands.war')
+  },
+  'wss': {
+    'full': 'wria2-sel',
+    'description': polyglot.t('commands.wss')
+  },
+  'wa': {
+    'full': 'wria2-api',
+    'description': polyglot.t('commands.wa')
+  },
+  'ws': {
+    'full': 'wria2-soy',
+    'description': 'Build all the Soy templates.'
+  },
+  'wi': {
+    'full': 'wria2-init',
+    'description': polyglot.t('commands.wi')
+  },
+  'wb': {
+    'full': 'wria2-build',
+    'description': polyglot.t('commands.wb')
+  },
+  'ww': {
+    'full': 'wria2-watch',
+    'description': polyglot.t('commands.ww')
+  },
+  'wy': {
+    'full': 'wria2-yui3',
+    'description': polyglot.t('commands.wy')
+  },
+  'wm': {
+    'full': 'wria2-mod',
+    'description': polyglot.t('commands.wm')
+  },
+  'serve': {
+    'description': polyglot.t('commands.serve')
+  }
+};
 
 for (var prop in fedToolsCommands) {
   if (fedToolsCommands.hasOwnProperty(prop) && prop) {
@@ -91,7 +101,7 @@ for (var prop in fedToolsCommands) {
 commandList.sort();
 
 function showParametersHelp() {
-  console.log('  Parameters:');
+  log.echo(polyglot.t('prompt.parameters'));
 
   var cmdtmp, cmdtmplen, cmdt, cmdl, cmdd, cmddlen, i, j,
     len = commandList.length,
@@ -100,7 +110,7 @@ function showParametersHelp() {
     CMD_PRE_BUFFER = '    ',
     CMD_MAX_LEN = 22,
     CMD_DESC_MAX = 50;
-  console.log(new Array(CMD_MAX_LEN + CMD_DESC_MAX + 1).join('─'));
+  log.echo(new Array(CMD_MAX_LEN + CMD_DESC_MAX + 1).join('─'));
 
   for (i = 0; i < len; i += 1) {
     cmdt = commandList[i];
@@ -136,13 +146,13 @@ function displayHelp() {
 argv = require('optimist')
   .usage('\nUsage: ' + pkgName + ' [options] ' + commandList.join('|'))
   .alias('h', 'help')
-  .describe('h', 'output usage information')
+  .describe('h', polyglot.t('help.h'))
   .alias('v', 'version')
-  .describe('v', 'output the version number')
+  .describe('v', polyglot.t('help.v'))
   .alias('b', 'boring')
-  .describe('b', 'do not use color output')
+  .describe('b', polyglot.t('help.b'))
   .alias('d', 'debug')
-  .describe('d', 'display extra information')
+  .describe('d', polyglot.t('help.d'))
   .boolean(['b', 'd', 'V', 'v', 'h', 'n']);
 
 program = argv.argv;
@@ -297,6 +307,7 @@ case 'tgz': // hidden menu
   utilities.timeTracker('start');
   log.echo();
   build.run(debug, {
+    polyglot: polyglot,
     write: write,
     remote: remote,
     username: program.u,
@@ -319,7 +330,7 @@ case 'tgz': // hidden menu
     if (!remote) {
       if (!err) {
         notifier.notify({
-          message: msg || 'Build was successful',
+          message: msg || polyglot.t('results.build.success'),
           sound: 'Glass'
         });
         utilities.timeTracker('stop');
@@ -340,14 +351,14 @@ case 'wb': // hidden menu
   }, function (err, stderr) {
     if (err && err !== -1) {
       notifier.notify({
-        message: 'Build failed...',
+        message: polyglot.t('results.build.error'),
         sound: 'Blow'
       });
       log.echo(stderr);
     }
     if (!err) {
       notifier.notify({
-        message: 'Build was successful',
+        message: polyglot.t('results.build.success'),
         sound: 'Glass'
       });
       utilities.timeTracker('stop');
@@ -361,10 +372,14 @@ case 'wi': // hidden menu
   log.echo();
   require('../lib/wria2-bootstrap').bootstrapRepository(debug, pkgConfig, function (err) {
     if (err) {
+      notifier.notify({
+        message: polyglot.t('results.bootstrap.error'),
+        sound: 'Blow'
+      });
       log.error(err);
     } else {
       notifier.notify({
-        message: 'Bootstrap was successful',
+        message: polyglot.t('results.bootstrap.success'),
         sound: 'Glass'
       });
     }
@@ -392,7 +407,9 @@ case 'wm': // hidden menu
 case 'serve':
 case 'server': // hidden menu
   if (!program.f) {
-    log.echo('Usage: fedtools ' + command + ' -f <packaged-file.tar.gz|folder>');
+    log.echo(polyglot.t('prompt.serve.usage', {
+      command: command
+    }));
     break;
   } else {
     log.echo();
@@ -404,8 +421,6 @@ case 'server': // hidden menu
 
   // case 'test':
 case 'wt':
-  log.blue('==> this is a b-b-blue test ');
-  log.yellow('==> this is a y-y-yellow test ');
 
   break;
 
