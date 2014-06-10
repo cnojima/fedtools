@@ -1,4 +1,10 @@
 {
+  "yes": "yes",
+  "no": "no",
+  "local": "local",
+  "remote": "remote",
+  "bye": "Bye then...",
+
   "commands": {
     "af": "Generates a single webapp flow skeleton from scratch.",
     "ai": "Generates a full webapp skeleton from scratch.",

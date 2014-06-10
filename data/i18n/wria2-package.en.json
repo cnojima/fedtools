@@ -1,0 +1,99 @@
+{
+  "The package will be built remotely": "The package will be built remotely",
+  "The package will be built directly on your machine": "The package will be built directly on your machine",
+  "Type your email": "Type your email",
+  "Type your git username (your fork name)": "Type your git user-name (your fork name)",
+  "Type the WF-RIA² branch you want to build": "Type the WF-RIA² branch you want to build",
+  "Type the YUI3 branch you need": "Type the YUI3 branch you need",
+  "The same job already exists!": "The same job already exists!",
+  "Job does not exist": "Job does not exist...",
+  "Your job is the first in the queue! ": "Your job is the first in the queue! ",
+  "Cleaning up temporary directory": "Cleaning up temporary directory...",
+  "Cannot clone WF-RIA2 branch for fork": "Cannot clone WF-RIA2 branch %{branch} for fork %{fork}",
+  "Repository cloned in temporary location": "Repository cloned in temporary location...",
+  "Cannot clone YUI3 branch": "Cannot clone YUI3 branch %{branch}",
+  "YUI3 cloned successfully": "YUI3 cloned successfully...",
+  "Cannot install NPM packages": "Cannot install NPM packages under %{build}",
+  "Running maven package build": "Running maven package build, time to grab a coffee...",
+  "Maven build failed": "Maven build failed...",
+
+  "choices": {
+    "runLocallyOrRemote": "Run the build locally [%{local}] or on Jenkins [%{remote}]:",
+    "remoteOptions": "Do you want to [%{add}]dd a job, [%{remove}]emove a job or check the jobs [%{status}]tatus?:",
+    "enterForDefault": ", or ENTER for default [%{data}]",
+    "customSha": "Do you want to use 'custom' instead of sha? [Y|n]",
+    "remotePassword": "Type the password for user 'warbuilder':"
+  },
+
+  "email": {
+    "subject": "WF-RIA² package remote build %{status}",
+    "body": "Your job request took longer to run than allowed. It was still running after %{ttl} minutes which is way past its bed time. We had to kill it. Sorry :("
+  },
+
+  "checkJobStatus": {
+    "userFork": " User fork                 : ",
+    "wriaBranch": " WF-RIA branch             : ",
+    "yuiBranch": " YUI branch                : ",
+    "addedInQ": " Added in queue            : ",
+    "total": " Currently running         : ",
+    "startTime": " Build start time          : ",
+    "eta": " Estimated completion time : ",
+    "noJobs": "There are no jobs scheduled to run remotely..."
+  },
+
+  "postBuild": {
+    "buildSuccess": "Package file built successfully!",
+    "fileName": "Package file name  : ",
+    "localPath": "Package local path : ",
+    "uploadURL": "Package upload URL : %{url}",
+    "sageAdvice": "You may want to remove the temporary folder: ",
+    "remoteJobDone": "Remote job is done! Sending email...",
+    "warning1": "Oops, cannot find the packaged build file...",
+    "warning2": "You may want to run the build yourself?",
+    "warning3": "The temporary clone folder is:"
+  },
+
+  "summary": {
+    "defaultMessageY": "[Y|n]",
+    "defaultMessageN": "[y|N]",
+    "title": "SUMMARY OF OPTIONS",
+    "userName": "User name                 : ",
+    "userEmail": "User email                : ",
+    "wriaBranch": "WF-RIA² branch            : ",
+    "yuiBranch": "YUI3 branch               : ",
+    "customSha": "Custom package Id         : ",
+    "location": "Build location            : ",
+    "eta1": "Estimated completion time : about 10 to 20 minutes",
+    "eta2": "Estimated completion time : about 10 minutes",
+    "scheduled": "Scheduled job removal     : ",
+    "warning1": "Be a good citizen, don't run this remote build too often!",
+    "warning2": "Hmm... the name of your YUI branch seems strange. Just sayin'",
+    "continue": "Continue? "
+  },
+
+  "errors": {
+    "mvn": "Couldn't find Maven... Please install it and try again",
+    "shifter": "Couldn't find Shifter... Please install it and try again",
+    "yogi": "Couldn't find Yogi... Please install it and try again",
+    "selleck": "Couldn't find Selleck... Please install it and try again",
+    "yuidoc": "Couldn't find YUIDoc... Please install it and try again"
+  },
+
+  "remoteRequest": {
+    "error": "There was a problem with the remote request",
+    "status": {
+      "info": "Getting jobs queue information...",
+      "success": "Jobs queue information successfully retrieved"
+    },
+    "add": {
+      "info": "Scheduling a remote package build for %{username} on Jenkins server...",
+      "success": "Job successfully scheduled"
+    },
+    "remove": {
+      "info": "Trying to cancel a previously scheduled job...",
+      "success": "Job removal successfully scheduled"
+    }
+  }
+
+
+}

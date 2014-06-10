@@ -12,15 +12,13 @@
 
 var fs = require('fs'),
   path = require('path'),
-  Polyglot = require('node-polyglot'),
   log = require('fedtools-logs'),
   utilities = require('fedtools-utilities'),
+  i18n = require('fedtools-i18n'),
   notifier = require('fedtools-notifier'),
 
   build = require('../lib/wria2-build'),
 
-  locales = {},
-  polyglot,
   program,
   argv,
   debug = false,
@@ -35,34 +33,32 @@ var fs = require('fs'),
   commandList = [],
   fedToolsCommands = {};
 
-locales.en = require('../data/i18n/common/en_US');
-polyglot = new Polyglot({
-  phrases: locales.en
-});
+// load common phrases
+i18n.loadPhrases(path.resolve(__dirname, '..', 'data', 'i18n', 'common'));
 
 fedToolsCommands = {
   'af': {
     'full': 'app-flow',
-    'description': polyglot.t('commands.af')
+    'description': i18n.t('commands.af')
   },
   'ai': {
     'full': 'app-init',
-    'description': polyglot.t('commands.ai')
+    'description': i18n.t('commands.ai')
   },
   'bump': {
-    'description': polyglot.t('commands.bump')
+    'description': i18n.t('commands.bump')
   },
   'war': {
     'full': 'wria2-war',
-    'description': polyglot.t('commands.war')
+    'description': i18n.t('commands.war')
   },
   'wss': {
     'full': 'wria2-sel',
-    'description': polyglot.t('commands.wss')
+    'description': i18n.t('commands.wss')
   },
   'wa': {
     'full': 'wria2-api',
-    'description': polyglot.t('commands.wa')
+    'description': i18n.t('commands.wa')
   },
   'ws': {
     'full': 'wria2-soy',
@@ -70,26 +66,26 @@ fedToolsCommands = {
   },
   'wi': {
     'full': 'wria2-init',
-    'description': polyglot.t('commands.wi')
+    'description': i18n.t('commands.wi')
   },
   'wb': {
     'full': 'wria2-build',
-    'description': polyglot.t('commands.wb')
+    'description': i18n.t('commands.wb')
   },
   'ww': {
     'full': 'wria2-watch',
-    'description': polyglot.t('commands.ww')
+    'description': i18n.t('commands.ww')
   },
   'wy': {
     'full': 'wria2-yui3',
-    'description': polyglot.t('commands.wy')
+    'description': i18n.t('commands.wy')
   },
   'wm': {
     'full': 'wria2-mod',
-    'description': polyglot.t('commands.wm')
+    'description': i18n.t('commands.wm')
   },
   'serve': {
-    'description': polyglot.t('commands.serve')
+    'description': i18n.t('commands.serve')
   }
 };
 
@@ -101,7 +97,7 @@ for (var prop in fedToolsCommands) {
 commandList.sort();
 
 function showParametersHelp() {
-  log.echo(polyglot.t('prompt.parameters'));
+  log.echo(i18n.t('prompt.parameters'));
 
   var cmdtmp, cmdtmplen, cmdt, cmdl, cmdd, cmddlen, i, j,
     len = commandList.length,
@@ -146,13 +142,13 @@ function displayHelp() {
 argv = require('optimist')
   .usage('\nUsage: ' + pkgName + ' [options] ' + commandList.join('|'))
   .alias('h', 'help')
-  .describe('h', polyglot.t('help.h'))
+  .describe('h', i18n.t('help.h'))
   .alias('v', 'version')
-  .describe('v', polyglot.t('help.v'))
+  .describe('v', i18n.t('help.v'))
   .alias('b', 'boring')
-  .describe('b', polyglot.t('help.b'))
+  .describe('b', i18n.t('help.b'))
   .alias('d', 'debug')
-  .describe('d', polyglot.t('help.d'))
+  .describe('d', i18n.t('help.d'))
   .boolean(['b', 'd', 'V', 'v', 'h', 'n']);
 
 program = argv.argv;
@@ -307,7 +303,7 @@ case 'tgz': // hidden menu
   utilities.timeTracker('start');
   log.echo();
   build.run(debug, {
-    polyglot: polyglot,
+    i18n: i18n,
     write: write,
     remote: remote,
     username: program.u,
@@ -330,7 +326,7 @@ case 'tgz': // hidden menu
     if (!remote) {
       if (!err) {
         notifier.notify({
-          message: msg || polyglot.t('results.build.success'),
+          message: msg || i18n.t('results.build.success'),
           sound: 'Glass'
         });
         utilities.timeTracker('stop');
@@ -351,14 +347,14 @@ case 'wb': // hidden menu
   }, function (err, stderr) {
     if (err && err !== -1) {
       notifier.notify({
-        message: polyglot.t('results.build.error'),
+        message: i18n.t('results.build.error'),
         sound: 'Blow'
       });
       log.echo(stderr);
     }
     if (!err) {
       notifier.notify({
-        message: polyglot.t('results.build.success'),
+        message: i18n.t('results.build.success'),
         sound: 'Glass'
       });
       utilities.timeTracker('stop');
@@ -373,13 +369,13 @@ case 'wi': // hidden menu
   require('../lib/wria2-bootstrap').bootstrapRepository(debug, pkgConfig, function (err) {
     if (err) {
       notifier.notify({
-        message: polyglot.t('results.bootstrap.error'),
+        message: i18n.t('results.bootstrap.error'),
         sound: 'Blow'
       });
       log.error(err);
     } else {
       notifier.notify({
-        message: polyglot.t('results.bootstrap.success'),
+        message: i18n.t('results.bootstrap.success'),
         sound: 'Glass'
       });
     }
@@ -407,7 +403,7 @@ case 'wm': // hidden menu
 case 'serve':
 case 'server': // hidden menu
   if (!program.f) {
-    log.echo(polyglot.t('prompt.serve.usage', {
+    log.echo(i18n.t('prompt.serve.usage', {
       command: command
     }));
     break;
