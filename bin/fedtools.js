@@ -410,7 +410,8 @@ case 'server': // hidden menu
   } else {
     log.echo();
     require('../lib/wria2-serve').serveApi(debug, {
-      file: program.f
+      file: program.f,
+      i18n: i18n
     }, function () {});
   }
   break;

@@ -1,0 +1,15 @@
+{
+  "serve": {
+    "errors": {
+      "java": "Couldn't find Java... Please install it and try again!",
+      "fileIO": "File is unreadable: "
+    },
+
+    "usingExisting": "Using existing extracted tar...",
+    "extracting": "Extracting tarball...",
+    "starting": "Starting local server on port 8090...",
+    "serverUp": "Local server is up. Type CTRL+C to stop it.",
+    "serverURL": "URL is now available here:",
+    "openInDefaultBrowser": "Open it in your default browser?"
+  }
+}
