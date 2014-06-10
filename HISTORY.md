@@ -1,4 +1,8 @@
 
+__0.0.138 / 2014-06-10__
+
+    5df9a67 [Arno V]: Refactoring serve and adding unit tests for it
+
 __0.0.137 / 2014-06-09__
 
     ddffe4c [Arno V]: Fixing 'serve' not serving anymore on Windows...
