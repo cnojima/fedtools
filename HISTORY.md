@@ -1,4 +1,8 @@
 
+__0.0.137 / 2014-06-09__
+
+    ddffe4c [Arno V]: Fixing 'serve' not serving anymore on Windows...
+
 __0.0.136 / 2014-06-09__
 
     d779010 [Arno V]: Merge pull request #34 from aversini/i18n
