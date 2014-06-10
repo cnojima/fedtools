@@ -1,4 +1,12 @@
 
+__0.0.136 / 2014-06-09__
+
+    d779010 [Arno V]: Merge pull request #34 from aversini/i18n
+    6af7a1d [Arno V]: Converting `serve` to i18n
+    93da5cd [Arno V]: Fix duplicate prompt when starting server
+    fa8d225 [Arno V]: Refactoring and now using fedtools-i18n
+    b6f832d [Arno V]: First pass at i18n
+
 __0.0.135 / 2014-06-08__
 
     273d078 [Arno V]: updating `glob` and `ncp` to latest stable version
