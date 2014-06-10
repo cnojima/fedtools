@@ -74,7 +74,6 @@ describe('wria2-serve#war', function () {
       expect(fs.existsSync(extractedTarFile)).to.be.true;
       // then try to extract again
       logs.once('logging', function (level, output) {
-        console.log('==> ', output);
         var expectedMessage = i18n.t('serve.usingExisting');
         expect(output.rawMessage).to.match(new RegExp(expectedMessage));
         logs.silent = false;
