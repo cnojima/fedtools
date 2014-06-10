@@ -6,6 +6,7 @@ var build = require('../lib/wria2-build'),
   war = require('../lib/wria2-package'),
   logs = require('fedtools-logs'),
   utilities = require('fedtools-utilities'),
+  i18n = require('fedtools-i18n'),
   chai = require('chai');
 
 chai.should();
@@ -18,5 +19,6 @@ global.modules = modules;
 global.logs = logs;
 global.war = war;
 global.utilities = utilities;
+global.i18n = i18n;
 
 global.expect = chai.expect;

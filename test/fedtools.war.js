@@ -1,5 +1,5 @@
 /*jshint mocha:true, expr:true*/
-/*global expect,war,logs,utilities*/
+/*global expect,war,logs,utilities,i18n*/
 
 var _ = require('underscore'),
   path = require('path'),
@@ -14,6 +14,10 @@ describe('build#war', function () {
   var mockdataDir = path.join(__dirname, 'mockdata'),
     tmpDir = utilities.getTemporaryDir();
   mkdirp.sync(mockdataDir);
+
+  // set i18n
+  i18n.loadPhrases(path.resolve(__dirname,
+    '..', 'data', 'i18n', 'wria2-package'));
 
   beforeEach(function () {
     // remove the file
@@ -32,6 +36,7 @@ describe('build#war', function () {
 
     // add the job
     war.private.addJobToQueue(warJobQueueFile, {
+      i18n: i18n,
       username: 'arno',
       useremail: 'toto@titi.fr',
       wriaBranch: 'some-branch',
@@ -72,6 +77,7 @@ describe('build#war', function () {
 
     // add the job
     war.private.addJobToQueue(warJobQueueFile, {
+      i18n: i18n,
       username: 'eva',
       useremail: 'tata@tutu.fr',
       wriaBranch: 'some-branch',
@@ -115,6 +121,7 @@ describe('build#war', function () {
 
     // add the job
     war.private.addJobToQueue(warJobQueueFile, {
+      i18n: i18n,
       username: 'arno',
       useremail: 'toto@titi.fr',
       wriaBranch: 'some-branch',
@@ -156,6 +163,7 @@ describe('build#war', function () {
 
     // remove the job
     war.private.removeJobFromQueue(warJobQueueFile, {
+      i18n: i18n,
       username: 'arno',
       useremail: 'toto@titi.fr',
       wriaBranch: 'some-branch',
@@ -183,6 +191,7 @@ describe('build#war', function () {
 
   it('should generate a temporary folder for the user', function (done) {
     war.private.generateTemporaryFolderName({
+      i18n: i18n,
       username: 'my-name-is-bond'
     }, function (err, data) {
       expect(data).to.be.an('Object');
@@ -201,6 +210,7 @@ describe('build#war', function () {
 
     // then use the API to remove that user sub-folder
     war.private.removeTemporaryFolder({
+      i18n: i18n,
       tmpClonePath: tmpClonePath
     }, function (err, data) {
       expect(data).to.be.an('Object');
@@ -215,6 +225,7 @@ describe('build#war', function () {
     // silence!
     logs.silent = true;
     war.private.shallowCloneWFRIA({
+      i18n: i18n,
       write: false,
       tmpBuildDirName: 'some-folder'
     }, function (err, data) {
@@ -269,6 +280,7 @@ describe('build#war', function () {
     fs.writeFileSync(warJobQueueFile, JSON.stringify(jobs, null, 2));
 
     war.private.postMavenBuild({
+      i18n: i18n,
       write: false,
       remote: true,
       tmpClonePath: tmpClonePath,
@@ -345,6 +357,7 @@ describe('build#war', function () {
     fs.writeFileSync(warJobQueueFile, JSON.stringify(jobs, null, 2));
 
     war.private.postMavenBuild({
+      i18n: i18n,
       write: false,
       remote: true,
       tmpClonePath: tmpClonePath,
@@ -396,6 +409,7 @@ describe('build#war', function () {
     expect(fs.existsSync(path.join(tmpClonePath, fileName))).to.be.false;
 
     war.private.postMavenBuild({
+      i18n: i18n,
       write: false,
       remote: false,
       tmpClonePath: tmpClonePath,
@@ -433,6 +447,7 @@ describe('build#war', function () {
     expect(fs.existsSync(path.join(tmpClonePath, fileName))).to.be.false;
 
     war.private.postMavenBuild({
+      i18n: i18n,
       write: false,
       remote: false,
       tmpClonePath: tmpClonePath,
@@ -465,11 +480,11 @@ describe('build#war', function () {
     logs.silent = true;
 
     mkdirp.sync(targetDir);
-    // fs.writeFileSync(path.join(targetDir, fileName), '');
     expect(fs.existsSync(path.join(targetDir, fileName))).to.be.false;
     expect(fs.existsSync(path.join(tmpClonePath, fileName))).to.be.false;
 
     war.private.postMavenBuild({
+      i18n: i18n,
       write: false,
       remote: false,
       tmpClonePath: tmpClonePath,
@@ -503,11 +518,11 @@ describe('build#war', function () {
     logs.silent = true;
 
     mkdirp.sync(targetDir);
-    // fs.writeFileSync(path.join(targetDir, fileName), '');
     expect(fs.existsSync(path.join(targetDir, fileName))).to.be.false;
     expect(fs.existsSync(path.join(tmpClonePath, fileName))).to.be.false;
 
     war.private.postMavenBuild({
+      i18n: i18n,
       write: false,
       remote: false,
       tmpClonePath: tmpClonePath,

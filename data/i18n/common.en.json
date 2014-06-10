@@ -1,0 +1,47 @@
+{
+  "yes": "yes",
+  "no": "no",
+  "local": "local",
+  "remote": "remote",
+  "bye": "Bye then...",
+
+  "commands": {
+    "af": "Generates a single webapp flow skeleton from scratch.",
+    "ai": "Generates a full webapp skeleton from scratch.",
+    "bump": "Update the version of the WF-RIA² framework in all the files (pom.xml, shifter, etc).",
+    "war": "Generate a WF-RIA² package file ready to be deployed to a CI server or to your own JSP container.",
+    "wss": "Start Selleck to serve example pages for the WF-RIA² framework.",
+    "wa": "Start YUIDoc server to view API docs of the WF-RIA² framework.",
+    "wi": "Bootstrap a local WF-RIA² git repository (clone, hooks, synchornize with yui3, etc.)",
+    "wb": "Run a full WF-RIA² build or a single component build depending on the current path.",
+    "ww": "Watch and compile a full WF-RIA² source tree or a single component depending on the current path.",
+    "wy": "Synchronize a local repository with the latest YUI3 code (provided by wria).",
+    "wm": "Create a new module (skeleton code, including unit tests and documentation).",
+    "serve": "Serve your local copy of the WF-RIA² framework examples/API."
+  },
+
+  "prompt": {
+    "parameters": "  Parameters:",
+    "serve": {
+      "usage": "Usage: fedtools %{command} -f <packaged-file.tar.gz|folder>"
+    }
+  },
+
+  "help": {
+    "h": "output usage information",
+    "v": "output the version number",
+    "b": "do not use colors",
+    "d": "display extra information"
+  },
+
+  "results": {
+    "build": {
+      "success": "Build was successful",
+      "error": "Build failed..."
+    },
+    "bootstrap": {
+      "success": "Bootstrap was successful",
+      "error": "Bootstrap failed..."
+    }
+  }
+}

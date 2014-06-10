@@ -14,6 +14,7 @@ var fs = require('fs'),
   path = require('path'),
   log = require('fedtools-logs'),
   utilities = require('fedtools-utilities'),
+  i18n = require('fedtools-i18n'),
   notifier = require('fedtools-notifier'),
 
   build = require('../lib/wria2-build'),
@@ -30,58 +31,63 @@ var fs = require('fs'),
   pkgName = packageFileJson.name,
 
   commandList = [],
-  fedToolsCommands = {
-    'af': {
-      'full': 'app-flow',
-      'description': 'Generates a single webapp flow skeleton from scratch.'
-    },
-    'ai': {
-      'full': 'app-init',
-      'description': 'Generates a full webapp skeleton from scratch.'
-    },
-    'bump': {
-      'description': 'Update the version of the WF-RIA2 framework in all the files (pom.xml, shifter, etc).'
-    },
-    'war': {
-      'full': 'wria2-war',
-      'description': 'Generate a wria2 WAR file ready to be deployed to a CI server or to your own JSP container.'
-    },
-    'wss': {
-      'full': 'wria2-sel',
-      'description': 'Start Selleck to serve example pages for the wria2 framework.'
-    },
-    'wa': {
-      'full': 'wria2-api',
-      'description': 'Start YUIDoc server to view API docs of the wria2 framework.'
-    },
-    'ws': {
-      'full': 'wria2-soy',
-      'description': 'Build all the Soy templates.'
-    },
-    'wi': {
-      'full': 'wria2-init',
-      'description': 'Bootstrap a local wria2 git repository (clone, hooks, synchornize with yui3, etc.)'
-    },
-    'wb': {
-      'full': 'wria2-build',
-      'description': 'Run a full wria2 build or a single component build depending on the current path.'
-    },
-    'ww': {
-      'full': 'wria2-watch',
-      'description': 'Watch and compile a full wria2 source tree or a single component depending on the current path.'
-    },
-    'wy': {
-      'full': 'wria2-yui3',
-      'description': 'Synchronize a local repository with the latest YUI3 code (provided by wria).'
-    },
-    'wm': {
-      'full': 'wria2-mod',
-      'description': 'Create a new module (skeleton code, including unit tests and documentation).'
-    },
-    'serve': {
-      'description': 'Serve your local copy of the WF-RIA2 framework examples/API.'
-    }
-  };
+  fedToolsCommands = {};
+
+// load common phrases
+i18n.loadPhrases(path.resolve(__dirname, '..', 'data', 'i18n', 'common'));
+
+fedToolsCommands = {
+  'af': {
+    'full': 'app-flow',
+    'description': i18n.t('commands.af')
+  },
+  'ai': {
+    'full': 'app-init',
+    'description': i18n.t('commands.ai')
+  },
+  'bump': {
+    'description': i18n.t('commands.bump')
+  },
+  'war': {
+    'full': 'wria2-war',
+    'description': i18n.t('commands.war')
+  },
+  'wss': {
+    'full': 'wria2-sel',
+    'description': i18n.t('commands.wss')
+  },
+  'wa': {
+    'full': 'wria2-api',
+    'description': i18n.t('commands.wa')
+  },
+  'ws': {
+    'full': 'wria2-soy',
+    'description': 'Build all the Soy templates.'
+  },
+  'wi': {
+    'full': 'wria2-init',
+    'description': i18n.t('commands.wi')
+  },
+  'wb': {
+    'full': 'wria2-build',
+    'description': i18n.t('commands.wb')
+  },
+  'ww': {
+    'full': 'wria2-watch',
+    'description': i18n.t('commands.ww')
+  },
+  'wy': {
+    'full': 'wria2-yui3',
+    'description': i18n.t('commands.wy')
+  },
+  'wm': {
+    'full': 'wria2-mod',
+    'description': i18n.t('commands.wm')
+  },
+  'serve': {
+    'description': i18n.t('commands.serve')
+  }
+};
 
 for (var prop in fedToolsCommands) {
   if (fedToolsCommands.hasOwnProperty(prop) && prop) {
@@ -91,7 +97,7 @@ for (var prop in fedToolsCommands) {
 commandList.sort();
 
 function showParametersHelp() {
-  console.log('  Parameters:');
+  log.echo(i18n.t('prompt.parameters'));
 
   var cmdtmp, cmdtmplen, cmdt, cmdl, cmdd, cmddlen, i, j,
     len = commandList.length,
@@ -100,7 +106,7 @@ function showParametersHelp() {
     CMD_PRE_BUFFER = '    ',
     CMD_MAX_LEN = 22,
     CMD_DESC_MAX = 50;
-  console.log(new Array(CMD_MAX_LEN + CMD_DESC_MAX + 1).join('─'));
+  log.echo(new Array(CMD_MAX_LEN + CMD_DESC_MAX + 1).join('─'));
 
   for (i = 0; i < len; i += 1) {
     cmdt = commandList[i];
@@ -136,13 +142,13 @@ function displayHelp() {
 argv = require('optimist')
   .usage('\nUsage: ' + pkgName + ' [options] ' + commandList.join('|'))
   .alias('h', 'help')
-  .describe('h', 'output usage information')
+  .describe('h', i18n.t('help.h'))
   .alias('v', 'version')
-  .describe('v', 'output the version number')
+  .describe('v', i18n.t('help.v'))
   .alias('b', 'boring')
-  .describe('b', 'do not use color output')
+  .describe('b', i18n.t('help.b'))
   .alias('d', 'debug')
-  .describe('d', 'display extra information')
+  .describe('d', i18n.t('help.d'))
   .boolean(['b', 'd', 'V', 'v', 'h', 'n']);
 
 program = argv.argv;
@@ -297,6 +303,7 @@ case 'tgz': // hidden menu
   utilities.timeTracker('start');
   log.echo();
   build.run(debug, {
+    i18n: i18n,
     write: write,
     remote: remote,
     username: program.u,
@@ -319,7 +326,7 @@ case 'tgz': // hidden menu
     if (!remote) {
       if (!err) {
         notifier.notify({
-          message: msg || 'Build was successful',
+          message: msg || i18n.t('results.build.success'),
           sound: 'Glass'
         });
         utilities.timeTracker('stop');
@@ -340,14 +347,14 @@ case 'wb': // hidden menu
   }, function (err, stderr) {
     if (err && err !== -1) {
       notifier.notify({
-        message: 'Build failed...',
+        message: i18n.t('results.build.error'),
         sound: 'Blow'
       });
       log.echo(stderr);
     }
     if (!err) {
       notifier.notify({
-        message: 'Build was successful',
+        message: i18n.t('results.build.success'),
         sound: 'Glass'
       });
       utilities.timeTracker('stop');
@@ -361,10 +368,14 @@ case 'wi': // hidden menu
   log.echo();
   require('../lib/wria2-bootstrap').bootstrapRepository(debug, pkgConfig, function (err) {
     if (err) {
+      notifier.notify({
+        message: i18n.t('results.bootstrap.error'),
+        sound: 'Blow'
+      });
       log.error(err);
     } else {
       notifier.notify({
-        message: 'Bootstrap was successful',
+        message: i18n.t('results.bootstrap.success'),
         sound: 'Glass'
       });
     }
@@ -392,20 +403,21 @@ case 'wm': // hidden menu
 case 'serve':
 case 'server': // hidden menu
   if (!program.f) {
-    log.echo('Usage: fedtools ' + command + ' -f <packaged-file.tar.gz|folder>');
+    log.echo(i18n.t('prompt.serve.usage', {
+      command: command
+    }));
     break;
   } else {
     log.echo();
     require('../lib/wria2-serve').serveApi(debug, {
-      file: program.f
+      file: program.f,
+      i18n: i18n
     }, function () {});
   }
   break;
 
   // case 'test':
 case 'wt':
-  log.blue('==> this is a b-b-blue test ');
-  log.yellow('==> this is a y-y-yellow test ');
 
   break;
 

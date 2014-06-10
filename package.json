@@ -26,6 +26,7 @@
   "dependencies": {
     "async": "~0.9.0",
     "fedtools-commands": "*",
+    "fedtools-i18n": "*",
     "fedtools-logs": "~0.1.1",
     "fedtools-notifier": "*",
     "fedtools-utilities": "*",
