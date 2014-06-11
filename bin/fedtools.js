@@ -326,7 +326,7 @@ case 'tgz': // hidden menu
     if (!remote) {
       if (!err) {
         notifier.notify({
-          message: msg || i18n.t('results.build.success'),
+          message: (typeof msg === 'string') ? msg : i18n.t('results.build.success'),
           sound: 'Glass'
         });
         utilities.timeTracker('stop');
