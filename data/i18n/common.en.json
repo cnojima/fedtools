@@ -4,6 +4,7 @@
   "local": "local",
   "remote": "remote",
   "bye": "Bye then...",
+  "continue": "Continue",
 
   "commands": {
     "af": "Generates a single webapp flow skeleton from scratch.",
