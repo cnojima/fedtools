@@ -1,4 +1,8 @@
 
+__0.0.140 / 2014-06-11__
+
+    ae21fc7 [Arno V]: Fix broken notification after WAR build
+
 __0.0.139 / 2014-06-10__
 
     d5d0df7 [Arno V]: Removing debug logs from unit-tests
