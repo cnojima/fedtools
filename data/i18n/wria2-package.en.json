@@ -16,6 +16,8 @@
   "Cannot install NPM packages": "Cannot install NPM packages under %{build}",
   "Running maven package build": "Running maven package build, time to grab a coffee...",
   "Maven build failed": "Maven build failed...",
+  "totalJobsBefore": "There is %{smart_count} scheduled job before yours. |||| There are %{smart_count} scheduled jobs before yours.",
+  "maxWaitTime": "It means that your job should be done in a maximum of %{minutes} minutes depending on the load on the remote server...",
 
   "choices": {
     "runLocallyOrRemote": "Run the build locally [%{local}] or on Jenkins [%{remote}]:",
