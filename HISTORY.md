@@ -1,4 +1,10 @@
 
+__0.0.142 / 2014-06-12__
+
+    7904236 [Arno V]: Fixing unit test (for fedtools-apps)
+    05e6acd [Arno V]: Removing apps and moving it to fedtools-apps
+    e817caf [Arno V]: typo
+
 __0.0.141 / 2014-06-11__
 
     7b2a509 [Arno V]: More code/content separation
