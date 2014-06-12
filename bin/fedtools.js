@@ -200,7 +200,7 @@ if (program.write !== undefined && program.write === false) {
 // -P               Runs the oldest WAR job from the queue if no other is running
 
 /********************/
-/* Parsing comamnds */
+/* Parsing commands */
 /********************/
 if (program._.length === 0 || program._.length > 1) {
   displayHelp();
