@@ -218,7 +218,7 @@ log.debug('command: ', command);
 switch (command) {
 case 'app-flow':
 case 'af': // hidden menu
-  var app = require('../lib/app-bootstrap');
+  var app = require('fedtools-apps');
   log.echo();
   app.run(app.TYPE_FLOW, function (err) {
     if (err && err !== -1) {
@@ -229,7 +229,7 @@ case 'af': // hidden menu
 
 case 'app-init':
 case 'ai': // hidden menu
-  var app = require('../lib/app-bootstrap');
+  var app = require('fedtools-apps');
   utilities.timeTracker('start');
   log.echo();
   app.run(app.TYPE_APP, function (err) {
