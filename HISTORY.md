@@ -1,4 +1,13 @@
 
+__0.0.141 / 2014-06-11__
+
+    7b2a509 [Arno V]: More code/content separation
+    9d7c5de [Arno V]: Extracting more content from war builder
+    ab4066f [Arno V]: Refactoring serve to prevent folder pollution
+    37a48b4 [Arno V]: Display summary even for remote WAR request (not for status though)
+    5ffed58 [Arno V]: Content update for WAR summary
+    b82de68 [Arno V]: Missing 'continue' text from i18n
+
 __0.0.140 / 2014-06-11__
 
     ae21fc7 [Arno V]: Fix broken notification after WAR build
