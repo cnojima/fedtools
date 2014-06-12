@@ -6,8 +6,10 @@ var path = require('path'),
   rimraf = require('rimraf');
 
 describe('wria2-serve#war', function () {
-  var extractedFolder = path.resolve(__dirname, 'mockdata', 'example'),
-    extractedTarFile = path.resolve(extractedFolder, 'wria2-documentation-giberish.jar');
+  var extractedFolder = path.resolve(__dirname, 'mockdata',
+      'example-package'),
+    extractedTarFile = path.resolve(extractedFolder, 'example',
+      'wria2-documentation-giberish.jar');
 
   // set i18n
   i18n.loadPhrases(path.resolve(__dirname, '..', 'data', 'i18n', 'wria2-serve'));
