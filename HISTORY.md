@@ -1,4 +1,9 @@
 
+__0.0.143 / 2014-06-17__
+
+    4dd88ce [Arno V]: Merge pull request #36 from gurumvg/ISSUE#35
+    803214d [Guru Mitta]: Fixing ISSUE#35
+
 __0.0.142 / 2014-06-12__
 
     7904236 [Arno V]: Fixing unit test (for fedtools-apps)
