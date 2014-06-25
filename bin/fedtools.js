@@ -343,7 +343,8 @@ case 'wb': // hidden menu
   build.run(debug, {
     cwd: process.cwd(),
     prompt: true,
-    type: build.TYPE_BUILD
+    type: build.TYPE_BUILD,
+    clean: program.c
   }, function (err, stderr) {
     if (err && err !== -1) {
       notifier.notify({
