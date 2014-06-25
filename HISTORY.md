@@ -1,4 +1,8 @@
 
+__0.0.145 / 2014-06-25__
+
+    f837eb3 [Arno V]: Fixes #38 - Add extra option to clean SASS before building
+
 __0.0.144 / 2014-06-21__
 
     56d166a [Arno V]: Merge pull request #37 from skylargivens/component-addition
