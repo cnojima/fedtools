@@ -1,4 +1,8 @@
 
+__0.0.146 / 2014-06-27__
+
+    c0d30ee [Arno V]: Hidding the "app" commands from fedtools as they are being deprecated by the "Sheath" project.
+
 __0.0.145 / 2014-06-25__
 
     f837eb3 [Arno V]: Fixes #38 - Add extra option to clean SASS before building
