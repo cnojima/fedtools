@@ -37,14 +37,14 @@ var fs = require('fs'),
 i18n.loadPhrases(path.resolve(__dirname, '..', 'data', 'i18n', 'common'));
 
 fedToolsCommands = {
-  'af': {
-    'full': 'app-flow',
-    'description': i18n.t('commands.af')
-  },
-  'ai': {
-    'full': 'app-init',
-    'description': i18n.t('commands.ai')
-  },
+  // 'af': {
+  //   'full': 'app-flow',
+  //   'description': i18n.t('commands.af')
+  // },
+  // 'ai': {
+  //   'full': 'app-init',
+  //   'description': i18n.t('commands.ai')
+  // },
   'bump': {
     'description': i18n.t('commands.bump')
   },
