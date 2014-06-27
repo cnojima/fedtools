@@ -1,4 +1,8 @@
 
+__0.0.147 / 2014-06-27__
+
+    7bc24ea [Arno V]: Simplifying `fedtools wb` so that it only builds the module (and YUI and Loader only if needed)
+
 __0.0.146 / 2014-06-27__
 
     c0d30ee [Arno V]: Hidding the "app" commands from fedtools as they are being deprecated by the "Sheath" project.
