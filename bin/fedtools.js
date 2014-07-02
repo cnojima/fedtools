@@ -197,7 +197,9 @@ if (program.write !== undefined && program.write === false) {
 // -S               Prints the status of all current WAR jobs
 // -A               Adds a jenkins WAR job to the queue
 // -R               Removes a jenkins WAR job from the queue
-// -P               Runs the oldest WAR job from the queue if no other is running
+// -P               Process the oldest WAR job from the queue if no other
+//                  is running
+// -E               Execute the command directly, bypassing job queueing
 
 /********************/
 /* Parsing commands */
@@ -314,6 +316,7 @@ case 'tgz': // hidden menu
     addJob: program.A,
     removeJob: program.R,
     processJob: program.P,
+    executeJob: program.E,
     pkgConfig: pkgConfig,
     cwd: process.cwd(),
     prompt: true,
