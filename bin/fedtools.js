@@ -200,6 +200,7 @@ if (program.write !== undefined && program.write === false) {
 // -P               Process the oldest WAR job from the queue if no other
 //                  is running
 // -E               Execute the command directly, bypassing job queueing
+// -N               Flag to indicate a nightly build (only works with -E)
 
 /********************/
 /* Parsing commands */
@@ -317,6 +318,7 @@ case 'tgz': // hidden menu
     removeJob: program.R,
     processJob: program.P,
     executeJob: program.E,
+    nightly: program.N,
     pkgConfig: pkgConfig,
     cwd: process.cwd(),
     prompt: true,
