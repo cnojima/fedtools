@@ -1,4 +1,9 @@
 
+__0.0.148 / 2014-07-01__
+
+    0dd2ad6 [Arno V]: Fixing error caught by unit test!
+    65ce85c [Arno V]: Adding possibility to run a job directly if remote
+
 __0.0.147 / 2014-06-27__
 
     7bc24ea [Arno V]: Simplifying `fedtools wb` so that it only builds the module (and YUI and Loader only if needed)
