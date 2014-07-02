@@ -1,4 +1,8 @@
 
+__0.0.151 / 2014-07-02__
+
+    db2e81c [Arno V]: Adding date (MMDDYYYY) to nightly builds (to allow more than one at a one)
+
 __0.0.150 / 2014-07-02__
 
     ea48d52 [Arno V]: For 'nightly' builds, changing the tmp build folder to 'nightly' (to prevent clash with other 'wf' builds)
