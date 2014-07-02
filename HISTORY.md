@@ -1,4 +1,8 @@
 
+__0.0.150 / 2014-07-02__
+
+    ea48d52 [Arno V]: For 'nightly' builds, changing the tmp build folder to 'nightly' (to prevent clash with other 'wf' builds)
+
 __0.0.149 / 2014-07-02__
 
     e3cb4a0 [Arno V]: Adding 'nightly' flag to remote execute
