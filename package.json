@@ -1,6 +1,6 @@
 {
   "name": "fedtools",
-  "version": "0.0.149",
+  "version": "0.0.150",
   "description": "Set of tools for FEDs",
   "author": "Arno Versini",
   "bin": {
