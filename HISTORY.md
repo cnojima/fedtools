@@ -1,4 +1,8 @@
 
+__0.0.153 / 2014-07-02__
+
+    4e8c980 [Arno V]: Updating the custom SHA for nightly build... AGAIN
+
 __0.0.152 / 2014-07-02__
 
     1a22cb6 [Arno V]: Changing custom SHA for nightly build from 'nightly-MMDDYYYY' to 'nightlyMMDDYYYY'
