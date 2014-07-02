@@ -1,4 +1,8 @@
 
+__0.0.149 / 2014-07-02__
+
+    e3cb4a0 [Arno V]: Adding 'nightly' flag to remote execute
+
 __0.0.148 / 2014-07-01__
 
     0dd2ad6 [Arno V]: Fixing error caught by unit test!
