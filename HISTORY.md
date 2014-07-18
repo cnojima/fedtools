@@ -1,4 +1,8 @@
 
+__0.0.154 / 2014-07-18__
+
+    50c1289 [Arno V]: Fix issue #40: fedtools wria2-build would not build wf2-base-css
+
 __0.0.153 / 2014-07-02__
 
     4e8c980 [Arno V]: Updating the custom SHA for nightly build... AGAIN
