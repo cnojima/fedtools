@@ -1,4 +1,9 @@
 
+__0.0.155 / 2014-08-06__
+
+    bca4dec [Arno V]: Merge pull request #42 from gurumvg/ISSUE#41
+    045327f [Guru Mitta]: Modified to fix ISSUE #41
+
 __0.0.154 / 2014-07-18__
 
     50c1289 [Arno V]: Fix issue #40: fedtools wria2-build would not build wf2-base-css
