@@ -1,4 +1,9 @@
 
+__0.0.156 / 2014-08-06__
+
+    5963a19 [Arno V]: Fixing warning message for remote war build
+    450fce8 [Arno V]: Re-adding coverage for builds
+
 __0.0.155 / 2014-08-06__
 
     bca4dec [Arno V]: Merge pull request #42 from gurumvg/ISSUE#41
