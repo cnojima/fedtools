@@ -1,4 +1,8 @@
 
+__0.0.157 / 2014-08-06__
+
+    fbdd1d7 [Arno V]: Actually append wf2- to YUI branch if missing
+
 __0.0.156 / 2014-08-06__
 
     5963a19 [Arno V]: Fixing warning message for remote war build
